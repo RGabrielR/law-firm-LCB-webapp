@@ -69,7 +69,7 @@ const ContactSection = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-3 text-zinc-300 lg:justify-start">
               <HiPhone size={26} className="text-zinc-300" />
-              <p className="text-left leading-relaxed">+54 (388) 4881-609</p>
+              <p className="text-left leading-relaxed">+54 (381) 4099-177</p>
             </div>
           </div>
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
               endContent={<IoCalendarOutline size={24} className="ml-2 text-zinc-100" />}
               onClick={() => {
                 window.open(
-                  "https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0",
+                  "https://api.whatsapp.com/send/?phone=%2B543814099177&text&type=phone_number&app_absent=0",
                   "_blank",
                 );
               }}

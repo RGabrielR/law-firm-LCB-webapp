@@ -18,7 +18,7 @@ const structuredData = {
     "Legal services in Civil, Family, Labor and Criminal Law with in-person and remote consultations.",
   url: "https://www.estudiolcb.com.ar/",
   image: "https://www.estudiolcb.com.ar/herobanner.webp",
-  telephone: "+54 388 4881609",
+  telephone: "+54 381 4099177",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Avenida Salta 1563",

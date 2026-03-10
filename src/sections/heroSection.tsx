@@ -60,7 +60,7 @@ const HeroSection = () => {
               endContent={<IoCalendarOutline size={24} className="ml-2 text-zinc-100" />}
               onClick={() => {
                 window.open(
-                  "https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0",
+                  "https://api.whatsapp.com/send/?phone=%2B543814099177&text&type=phone_number&app_absent=0",
                   "_blank",
                 );
               }}
