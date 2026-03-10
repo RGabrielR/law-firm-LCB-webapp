@@ -19,7 +19,7 @@ const markerIcon = L.icon({
 const ContactMap = () => {
   const [isReady, setIsReady] = useState(false);
   const position = useMemo<LatLngExpression>(
-    () => [-24.1854821, -65.3096403],
+    () => [-26.8086267, -65.2052151],
     [],
   );
 
@@ -33,17 +33,15 @@ const ContactMap = () => {
   }, []);
 
   if (!isReady) {
-    return (
-      <div className="h-72 w-full animate-pulse rounded-3xl bg-slate-200 dark:bg-slate-700 lg:h-full" />
-    );
+    return <div className="h-72 w-full animate-pulse rounded-3xl bg-zinc-900 lg:h-full" />;
   }
 
   return (
     <MapContainer
       center={position}
-      zoom={18}
+      zoom={16}
       scrollWheelZoom={false}
-      className="h-72 w-full lg:h-full"
+      className="h-72 w-full lg:h-[420px]"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -51,9 +49,9 @@ const ContactMap = () => {
       />
       <Marker position={position} icon={markerIcon}>
         <Popup>
-          Estudio Jurídico Lidia Cristina Baiud
+          Dr. Miguel Alabi Law Office
           <br />
-          Ramírez de Velazco 672 · San Salvador de Jujuy
+          Avenida Salta 1563 · San Miguel de Tucuman
         </Popup>
       </Marker>
     </MapContainer>

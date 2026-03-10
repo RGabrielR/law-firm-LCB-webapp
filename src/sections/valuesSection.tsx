@@ -11,16 +11,16 @@ import values02 from "../../public/values02.webp";
 
 const values: { title: string; text: string }[] = [
   {
-    title: "Compromiso con la excelencia",
-    text: "Buscamos la excelencia en cada etapa de los procesos que gestionamos, desde la primera consulta hasta la resolución final. La calidad, la profundidad del análisis y la preparación meticulosa son nuestra norma.",
+    title: "Commitment to excellence",
+    text: "We prioritize legal rigor from first consultation to final resolution, with deep analysis and strong case preparation.",
   },
   {
-    title: "Empatía y cercanía",
-    text: "Cada situación es única y merece ser escuchada. Nos involucramos con sensibilidad para comprender el contexto personal o empresarial y ofrecer un acompañamiento humano y respetuoso.",
+    title: "Empathy and proximity",
+    text: "Every case has a personal context. We listen carefully and provide legal support with respect, clarity and practical focus.",
   },
   {
-    title: "Transparencia y comunicación",
-    text: "Construimos relaciones de confianza con información clara, reportes periódicos y explicación de escenarios posibles. Queremos que tomes decisiones informadas en todo momento.",
+    title: "Transparency and communication",
+    text: "You receive clear updates, realistic scenarios and understandable next steps to make informed decisions throughout the process.",
   },
 ];
 
@@ -38,32 +38,32 @@ const ValuesSection = () => {
         initial="hidden"
         animate={inView ? "show" : "hidden"}
         exit="hidden"
-        className="relative mx-auto flex w-full flex-col items-center gap-12 overflow-hidden rounded-3xl bg-slate-950 py-16 text-white shadow-2xl"
+        className="neo-panel relative mx-auto flex w-full flex-col items-center gap-12 overflow-hidden py-16 text-zinc-100"
       >
-        <div className="absolute inset-0 bg-[url('/valuesbg.webp')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/valuesbg.webp')] bg-cover bg-center opacity-10" />
         <div className="relative flex w-full flex-col items-center gap-12 px-6 lg:px-16">
           <h2
-            className="flex items-center justify-center gap-4 text-2xl font-semibold uppercase tracking-[0.4em] text-amber-300 md:text-3xl"
+            className="flex items-center justify-center gap-4 text-2xl font-semibold uppercase tracking-[0.4em] text-zinc-300 md:text-3xl"
             id="Values"
           >
-            Nuestros valores <BsFillPatchCheckFill size={40} />
+            Core Values <BsFillPatchCheckFill size={40} />
           </h2>
 
           <div className="flex w-full flex-col-reverse items-center gap-12 lg:flex-row">
             <div className="relative flex w-full flex-col items-center gap-6 lg:w-5/12">
-              <div className="absolute -right-10 top-10 hidden h-32 w-32 rounded-full bg-amber-400/20 blur-3xl lg:block" />
+              <div className="absolute -right-10 top-10 hidden h-32 w-32 rounded-full bg-zinc-500/20 blur-3xl lg:block" />
               <Image
                 src={values01}
-                alt="Trabajo colaborativo en el estudio"
-                className="h-auto w-full rounded-3xl object-cover shadow-lg"
+                alt="Legal teamwork"
+                className="h-auto w-full rounded-3xl object-cover shadow-[12px_12px_24px_rgba(0,0,0,0.6)]"
                 sizes="100vw"
                 width={0}
                 height={0}
               />
               <Image
                 src={values02}
-                alt="Equipo legal asesorando clientes"
-                className="h-auto w-full rounded-3xl object-cover shadow-lg"
+                alt="Legal counseling session"
+                className="h-auto w-full rounded-3xl object-cover shadow-[12px_12px_24px_rgba(0,0,0,0.6)]"
                 sizes="100vw"
                 width={0}
                 height={0}
@@ -74,15 +74,13 @@ const ValuesSection = () => {
               {values.map((value, index) => (
                 <div
                   key={value.title}
-                  className="rounded-3xl bg-white/10 p-6 backdrop-blur transition hover:bg-white/15"
+                  className="neo-inset p-6 transition hover:border-zinc-700"
                 >
-                  <span className="text-lg font-semibold text-amber-300">
+                  <span className="text-lg font-semibold text-zinc-300">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-2 text-2xl font-semibold">{value.title}</h3>
-                  <p className="mt-3 text-base font-light text-slate-100/90">
-                    {value.text}
-                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-zinc-100">{value.title}</h3>
+                  <p className="mt-3 text-base font-light text-zinc-300">{value.text}</p>
                 </div>
               ))}
             </div>

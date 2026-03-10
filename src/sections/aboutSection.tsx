@@ -22,46 +22,42 @@ const AboutSection = () => {
         initial="hidden"
         animate={inView ? "show" : "hidden"}
         exit="hidden"
-        className="flex w-full flex-col overflow-hidden rounded-3xl bg-white/85 shadow-xl backdrop-blur lg:flex-row"
+        className="neo-panel flex w-full flex-col overflow-hidden lg:flex-row"
       >
         <div className="flex w-full min-w-[50%] flex-col gap-8 p-8 lg:p-12">
           <div className="text-center lg:text-left">
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-500">
-              Sobre el estudio
+            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-zinc-400">
+              About The Office
             </span>
-            <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">
-              Asesoramiento jurídico profesional en San Salvador de Jujuy
+            <h2 className="mt-3 text-3xl font-black text-zinc-100 sm:text-4xl">
+              Legal advisory in San Miguel de Tucuman
             </h2>
           </div>
-          <p className="text-center text-base font-light leading-relaxed text-slate-600 md:text-lg lg:text-left">
-            Con mucha dedicación al ejercicio profesional, acompañamos a
-            personas, familias y empresas en decisiones clave. Abordamos cada
-            caso con estrategias personalizadas, comunicación transparente y un
-            compromiso auténtico por proteger tus intereses.
+          <p className="text-center text-base font-light leading-relaxed text-zinc-300 md:text-lg lg:text-left">
+            We support individuals, families and businesses in critical legal
+            decisions with transparent communication, case-tailored strategy, and
+            committed legal defense.
           </p>
 
-          <div className="rounded-3xl bg-slate-950 p-6 text-left text-white shadow-lg">
-            <span className="flex items-center gap-4 text-xl font-semibold uppercase tracking-wide text-amber-300 sm:text-2xl">
-              <TbTargetArrow size={42} /> Nuestra misión
+          <div className="neo-inset p-6 text-left text-zinc-100">
+            <span className="flex items-center gap-4 text-xl font-semibold uppercase tracking-wide text-zinc-200 sm:text-2xl">
+              <TbTargetArrow size={42} /> Our Mission
             </span>
-            <p className="mt-4 text-sm font-light leading-relaxed text-slate-100 md:text-base">
-              Promovemos la justicia y el bienestar de nuestros clientes a
-              través de soluciones legales claras, efectivas y humanas. Creemos
-              que cada persona merece una defensa comprometida y cercana, por
-              eso trabajamos con integridad, preparación constante y una visión
-              estratégica de largo plazo.
+            <p className="mt-4 text-sm font-light leading-relaxed text-zinc-300 md:text-base">
+              Deliver clear, effective and human-centered legal solutions. Every
+              case deserves precision, integrity and long-term strategic thinking.
             </p>
           </div>
         </div>
 
-        <div className="grid w-full place-items-center bg-gradient-to-br from-slate-100 via-white to-amber-50 p-8 lg:w-1/2">
+        <div className="grid w-full place-items-center bg-gradient-to-br from-black via-zinc-950 to-zinc-900 p-8 lg:w-1/2">
           <Image
             src={AboutMosaic}
-            alt="Estudio Jurídico Baiud - Oficinas y equipo profesional en San Salvador de Jujuy"
+            alt="Dr Miguel Alabi law office"
             sizes="100vw"
             width={0}
             height={0}
-            className="h-auto w-full max-w-xl rounded-3xl object-cover shadow-lg"
+            className="h-auto w-full max-w-xl rounded-3xl object-cover shadow-[12px_12px_26px_rgba(0,0,0,0.7)]"
           />
         </div>
       </motion.div>

@@ -9,18 +9,18 @@ html {
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
-    background-image: radial-gradient(
-        circle at 20% 20%,
-        rgba(251, 191, 36, 0.15),
-        transparent 45%
+    @apply antialiased text-zinc-100;
+    background: radial-gradient(
+        circle at 12% 10%,
+        rgba(113, 113, 122, 0.24),
+        transparent 35%
       ),
       radial-gradient(
-        circle at 80% 0%,
-        rgba(30, 64, 175, 0.12),
-        transparent 50%
+        circle at 86% 90%,
+        rgba(82, 82, 91, 0.18),
+        transparent 32%
       ),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 244, 249, 0.9));
+      linear-gradient(180deg, #09090b 0%, #000 100%);
     background-attachment: fixed;
   }
 
@@ -30,5 +30,34 @@ html {
 
   section {
     @apply px-6 lg:px-10;
+  }
+}
+
+@layer components {
+  .neo-panel {
+    @apply rounded-3xl border border-zinc-800/80 bg-zinc-950/70 backdrop-blur-xl;
+    box-shadow:
+      16px 16px 32px rgba(0, 0, 0, 0.65),
+      -10px -10px 24px rgba(63, 63, 70, 0.2),
+      inset 1px 1px 0 rgba(113, 113, 122, 0.2);
+  }
+
+  .neo-inset {
+    @apply rounded-3xl border border-zinc-800/70 bg-black/70;
+    box-shadow:
+      inset 10px 10px 26px rgba(0, 0, 0, 0.7),
+      inset -6px -6px 20px rgba(63, 63, 70, 0.2);
+  }
+
+  .neo-button {
+    @apply rounded-full border border-zinc-700 bg-zinc-900 px-7 py-3 font-semibold text-zinc-100 transition;
+    box-shadow:
+      8px 8px 18px rgba(0, 0, 0, 0.55),
+      -6px -6px 16px rgba(63, 63, 70, 0.2),
+      inset 1px 1px 0 rgba(113, 113, 122, 0.2);
+  }
+
+  .neo-button:hover {
+    @apply -translate-y-0.5 border-zinc-500 bg-black;
   }
 }

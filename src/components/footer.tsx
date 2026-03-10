@@ -1,44 +1,37 @@
-import Image from "next/image";
 import Link from "next/link";
-
-import Logo from "../../public/logo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 w-full border-t border-slate-200 bg-white/85 py-10 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-6 text-center text-sm text-slate-600 sm:flex-row sm:text-left">
+    <footer className="mt-20 w-full border-t border-zinc-800 bg-black/80 py-10 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-6 text-center text-sm text-zinc-400 sm:flex-row sm:text-left">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src={Logo}
-            alt="Estudio Jurídico Baiud"
-            width={160}
-            height={60}
-            className="h-auto w-40 object-contain"
-          />
+          <div className="rounded-2xl border border-zinc-700 bg-zinc-950/80 px-4 py-2 shadow-[8px_8px_20px_rgba(0,0,0,0.5),inset_1px_1px_0_rgba(113,113,122,0.15)]">
+            <p className="text-sm font-black tracking-[0.2em] text-zinc-100">ALABI</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
+              Estudio Juridico
+            </p>
+          </div>
         </Link>
         <div className="space-y-1">
+          <p>&copy; {currentYear} Dr. Miguel Alabi Law Office. All rights reserved.</p>
           <p>
-            &copy; {currentYear} Estudio Jurídico Lidia Cristina Baiud. Todos los
-            derechos reservados.
-          </p>
-          <p>
-            Ramírez de Velazco 672 · San Salvador de Jujuy ·{" "}
+            Avenida Salta 1563 · San Miguel de Tucuman ·{" "}
             <a
-              href="mailto:baiudlidiacristina@gmail.com"
-              className="font-medium text-slate-900 hover:text-amber-500"
+              href="mailto:alabimiguel@gmail.com"
+              className="font-medium text-zinc-200 hover:text-zinc-100"
             >
-              baiudlidiacristina@gmail.com
+              alabimiguel@gmail.com
             </a>
           </p>
         </div>
-        <div className="flex items-center gap-3 text-slate-500">
+        <div className="flex items-center gap-3 text-zinc-400">
           <a
             href="https://www.facebook.com/profile.php?id=100089098967597"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium hover:text-amber-500"
+            className="text-sm font-medium hover:text-zinc-200"
           >
             Facebook
           </a>
@@ -46,7 +39,7 @@ const Footer = () => {
             href="https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium hover:text-amber-500"
+            className="text-sm font-medium hover:text-zinc-200"
           >
             WhatsApp
           </a>

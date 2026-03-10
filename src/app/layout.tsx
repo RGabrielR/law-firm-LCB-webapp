@@ -13,67 +13,54 @@ const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  name: "Estudio Jurídico Lidia Cristina Baiud",
+  name: "Dr. Miguel Alabi Law Office",
   description:
-    "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud. Atención personalizada y experiencia en defensa de sus derechos.",
+    "Legal services in Civil, Family, Labor and Criminal Law with in-person and remote consultations.",
   url: "https://www.estudiolcb.com.ar/",
-  image: "https://www.estudiolcb.com.ar/logo.webp",
+  image: "https://www.estudiolcb.com.ar/herobanner.webp",
   telephone: "+54 388 4881609",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Ramírez de Velazco 672",
-    addressLocality: "San Salvador de Jujuy",
-    addressRegion: "Jujuy",
-    postalCode: "4600",
+    streetAddress: "Avenida Salta 1563",
+    addressLocality: "San Miguel de Tucuman",
+    addressRegion: "Tucuman",
+    postalCode: "4000",
     addressCountry: "AR",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -24.1841566,
-    longitude: -65.2963359,
   },
   openingHours: "Mo-Fr 08:00-20:00",
   priceRange: "$$",
-  areaServed: "Jujuy, Argentina",
+  areaServed: "San Miguel de Tucuman, Argentina",
   sameAs: ["https://www.facebook.com/profile.php?id=100089098967597"],
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.estudiolcb.com.ar'),
+  metadataBase: new URL("https://www.estudiolcb.com.ar"),
   title: {
-    default: "Estudio Jurídico Baiud | Abogada en Jujuy – Derecho Civil, Familia y Laboral",
-    template: "%s | Estudio Jurídico Baiud",
+    default: "Dr. Miguel Alabi Law Office | Legal Services in Tucuman",
+    template: "%s | Dr. Miguel Alabi Law Office",
   },
   description:
-    "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud. Atención personalizada y experiencia en defensa de sus derechos.",
+    "Civil, Family, Labor and Criminal legal services by Dr. Miguel Alabi in San Miguel de Tucuman.",
   keywords: [
-    "abogada en Jujuy",
-    "estudio jurídico",
-    "derecho de familia",
-    "derecho laboral",
-    "divorcios",
-    "sucesiones",
-    "despidos",
-    "San Salvador de Jujuy",
-    "abogados san salvador de jujuy",
-    "derecho civil jujuy",
-    "derecho penal jujuy",
-    "asesoría legal jujuy",
-    "mediación y arbitraje",
-    "derecho comercial",
-    "derecho previsional",
+    "Dr Miguel Alabi",
+    "law office Tucuman",
+    "labor lawyer Tucuman",
+    "family law Tucuman",
+    "civil law Tucuman",
+    "criminal defense Tucuman",
+    "legal consultation Argentina",
   ],
   category: "Legal",
-  authors: [{ name: "Estudio Jurídico Lidia Cristina Baiud" }],
+  authors: [{ name: "Dr. Miguel Alabi" }],
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
@@ -81,18 +68,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Estudio Jurídico Baiud | Abogada en Jujuy – Derecho Civil, Familia y Laboral",
+    title: "Dr. Miguel Alabi Law Office | Legal Services in Tucuman",
     description:
-      "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud.",
-    siteName: "Estudio Jurídico Baiud",
-    locale: "es_AR",
+      "Legal strategy and representation in Civil, Family, Labor and Criminal Law.",
+    siteName: "Dr. Miguel Alabi Law Office",
+    locale: "en_US",
     url: "https://www.estudiolcb.com.ar/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Jurídico Baiud | Abogada en Jujuy",
+    title: "Dr. Miguel Alabi Law Office",
     description:
-      "Consultas legales con la Dra. Lidia Cristina Baiud. Derecho Civil, Familia, Laboral y Penal en San Salvador de Jujuy.",
+      "Legal services in San Miguel de Tucuman. In-person and remote consultations.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -108,10 +95,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-AR">
-      <body
-        className={`${montserrat.className} min-h-screen bg-slate-50 text-slate-900 antialiased`}
-      >
+    <html lang="en">
+      <body className={`${montserrat.className} min-h-screen bg-black text-zinc-100 antialiased`}>
         <UIProvider>
           <Header />
           {children}
@@ -122,7 +107,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </body>
-      {/* Google Analytics */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-1CK50HM2ZS"
         strategy="afterInteractive"
@@ -133,7 +117,6 @@ export default function RootLayout({
         gtag('js', new Date());
         gtag('config', 'G-1CK50HM2ZS');
       `}</Script>
-      {/* Google Ads Conversion Tracking */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17663647340"
         strategy="afterInteractive"
