@@ -28,14 +28,6 @@ const Footer = () => {
         </div>
         <div className="flex items-center gap-3 text-zinc-400">
           <a
-            href="https://www.facebook.com/profile.php?id=100089098967597"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium hover:text-zinc-200"
-          >
-            Facebook
-          </a>
-          <a
             href="https://api.whatsapp.com/send/?phone=%2B543814099177&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noreferrer"

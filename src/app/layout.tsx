@@ -17,7 +17,7 @@ const structuredData = {
   description:
     "Legal services in Civil, Family, Labor and Criminal Law with in-person and remote consultations.",
   url: "https://www.estudiolcb.com.ar/",
-  image: "https://www.estudiolcb.com.ar/herobanner.webp",
+  image: "https://www.estudiolcb.com.ar/herobanner.png",
   telephone: "+54 381 4099177",
   address: {
     "@type": "PostalAddress",
@@ -30,7 +30,7 @@ const structuredData = {
   openingHours: "Mo-Fr 08:00-20:00",
   priceRange: "$$",
   areaServed: "San Miguel de Tucuman, Argentina",
-  sameAs: ["https://www.facebook.com/profile.php?id=100089098967597"],
+  sameAs: ["https://wa.me/543814099177"],
 };
 
 export const metadata: Metadata = {

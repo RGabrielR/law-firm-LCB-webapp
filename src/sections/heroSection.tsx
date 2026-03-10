@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { IoCalendarOutline } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
 
-import heroBanner from "../../public/herobanner.webp";
+import heroBanner from "../../public/herobanner.png";
 import { fadeIn } from "../../animation/variants";
 
 const HeroSection = () => {
@@ -33,7 +33,7 @@ const HeroSection = () => {
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-zinc-900/90 to-black mix-blend-multiply" />
           </div>
@@ -69,13 +69,13 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="neo-panel relative hidden w-full max-w-xl overflow-hidden p-2 lg:flex lg:w-5/12">
-            <div className="relative h-[420px] w-full overflow-hidden rounded-3xl">
+          <div className="neo-panel relative hidden w-full max-w-xl items-center justify-center overflow-hidden p-4 lg:flex lg:w-5/12">
+            <div className="relative aspect-[2/3] w-full max-w-[340px] overflow-hidden rounded-3xl bg-zinc-950/50">
               <Image
                 src={heroBanner}
                 alt="Dr Miguel Alabi legal services"
                 fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                sizes="(min-width: 1280px) 340px, (min-width: 1024px) 28vw, 100vw"
                 className="object-cover object-center"
                 priority
               />

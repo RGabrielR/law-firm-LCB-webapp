@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import {
   Navbar,
@@ -65,22 +65,6 @@ const Header = () => {
 
       <NavbarContent justify="end">
         <div className="flex cursor-pointer items-center justify-center gap-2">
-          <NavbarItem>
-            <Button
-              as={Link}
-              href="https://www.facebook.com/profile.php?id=100089098967597"
-              variant="light"
-              isIconOnly
-              target="_blank"
-              startContent={
-                <FaFacebookF
-                  size={40}
-                  className="rounded-full border border-zinc-700 bg-zinc-900/80 p-2 text-zinc-200 transition hover:bg-black"
-                />
-              }
-            />
-          </NavbarItem>
-
           <NavbarItem>
             <Button
               as={Link}
