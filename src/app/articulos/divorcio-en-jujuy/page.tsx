@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import JsonLd from "@/components/seo/jsonLd";
+import { articleMap, createArticleSchema } from "@/lib/articles";
+import { absoluteUrl, createBreadcrumbSchema } from "@/lib/site";
+
+const article = articleMap["divorcio-en-jujuy"];
+
 export const metadata: Metadata = {
-  title: "Divorcio en Jujuy: Guía Completa de Trámites y Procedimientos 2025",
+  title: "Divorcio en Jujuy: guía completa de trámites y procedimientos",
   description:
     "Guía completa sobre el proceso de divorcio en Jujuy. Requisitos, documentación, plazos y costos. Asesoramiento legal especializado con la Dra. Lidia Baiud.",
   keywords: [
@@ -13,19 +19,29 @@ export const metadata: Metadata = {
     "requisitos divorcio argentina",
   ],
   alternates: {
-    canonical: "https://www.estudiolcb.com.ar/articulos/divorcio-en-jujuy",
+    canonical: absoluteUrl("/articulos/divorcio-en-jujuy"),
   },
   openGraph: {
-    title: "Divorcio en Jujuy: Guía Completa de Trámites y Procedimientos",
+    title: "Divorcio en Jujuy: guía completa de trámites y procedimientos",
     description:
       "Todo lo que necesitás saber sobre el proceso de divorcio en Jujuy. Asesoramiento legal profesional.",
     type: "article",
+    url: absoluteUrl("/articulos/divorcio-en-jujuy"),
   },
 };
 
 export default function DivorcionEnJujuyPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-4xl px-6 py-20">
+      <JsonLd data={createArticleSchema(article)} />
+      <JsonLd
+        data={createBreadcrumbSchema([
+          { name: "Inicio", path: "/" },
+          { name: "Artículos", path: "/articulos" },
+          { name: "Divorcio en Jujuy", path: "/articulos/divorcio-en-jujuy" },
+        ])}
+      />
+
       <article className="prose prose-slate max-w-none">
         <div className="mb-8">
           <Link
@@ -98,9 +114,7 @@ export default function DivorcionEnJujuyPage() {
           Procedimiento del divorcio en Jujuy
         </h2>
 
-        <p>
-          El proceso de divorcio en Jujuy generalmente sigue estos pasos:
-        </p>
+        <p>El proceso de divorcio en Jujuy generalmente sigue estos pasos:</p>
 
         <h3 className="text-2xl font-semibold text-slate-900">
           1. Consulta legal inicial
@@ -168,9 +182,7 @@ export default function DivorcionEnJujuyPage() {
           Plazos y costos del divorcio en Jujuy
         </h2>
 
-        <p>
-          Los plazos varían según el tipo de divorcio:
-        </p>
+        <p>Los plazos varían según el tipo de divorcio:</p>
 
         <ul>
           <li>
@@ -196,7 +208,7 @@ export default function DivorcionEnJujuyPage() {
         </h2>
 
         <p>
-         Con gran dedicación al ejercicio del derecho de familia en Jujuy, la
+          Con gran dedicación al ejercicio del derecho de familia en Jujuy, la
           Dra. Lidia Cristina Baiud brinda asesoramiento integral y
           personalizado durante todo el proceso de divorcio. Trabajamos con
           empatía, profesionalismo y estrategia para proteger tus derechos y los

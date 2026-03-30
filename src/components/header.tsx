@@ -1,18 +1,19 @@
 "use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../public/logo.webp";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
-import { useState } from "react";
 import {
+  Button,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/react";
 
 const Header = () => {
@@ -24,12 +25,12 @@ const Header = () => {
       href: "#About",
     },
     {
-      title: "Valores",
-      href: "#Values",
-    },
-    {
       title: "Servicios",
       href: "#Services",
+    },
+    {
+      title: "Abogados en Jujuy",
+      href: "/abogados-en-jujuy",
     },
     {
       title: "Artículos",
@@ -56,7 +57,7 @@ const Header = () => {
           <NavbarBrand>
             <Image
               src={Logo}
-              alt="Logo de Estudio Juridico Baiud"
+              alt="Logo de Estudio Jurídico Baiud"
               sizes="100vw"
               height={0}
               width={0}
@@ -67,47 +68,18 @@ const Header = () => {
       </NavbarContent>
 
       <NavbarContent className="hidden gap-4 md:flex" justify="center">
-        <NavbarItem>
-          <Link
-            className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
-            href="#About"
-          >
-            Sobre
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
-            href="#Values"
-          >
-            Valores
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
-            href="#Services"
-          >
-            Servicios
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
-            href="/articulos"
-          >
-            Artículos
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
-            href="#Contact"
-          >
-            Contacto
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item) => (
+          <NavbarItem key={item.href}>
+            <Link
+              className="text-slate-700 transition-colors duration-300 hover:text-slate-950"
+              href={item.href}
+            >
+              {item.title}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
+
       <NavbarContent justify="end">
         <div className="flex cursor-pointer items-center justify-center gap-2">
           <NavbarItem>
@@ -126,24 +98,6 @@ const Header = () => {
               }
             />
           </NavbarItem>
-
-          {/* <NavbarItem>
-            <Button
-              as={Link}
-              color="primary"
-              href="#"
-              variant="flat"
-              isIconOnly
-              target="_blank"
-              startContent={
-                <FaInstagram
-                  size={40}
-                  className="rounded-full border-2 p-2 text-white"
-                />
-              }
-            />
-          </NavbarItem> */}
-
           <NavbarItem>
             <Button
               as={Link}
@@ -162,9 +116,10 @@ const Header = () => {
           </NavbarItem>
         </div>
       </NavbarContent>
+
       <NavbarMenu className="bg-white/95 pt-10 backdrop-blur-md">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
+        {menuItems.map((item) => (
+          <NavbarMenuItem key={item.href}>
             <Link className="w-full" href={item.href} size="lg">
               {item.title}
             </Link>

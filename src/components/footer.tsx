@@ -18,10 +18,10 @@ const Footer = () => {
             className="h-auto w-40 object-contain"
           />
         </Link>
-        <div className="space-y-1">
+        <div className="space-y-2">
           <p>
-            &copy; {currentYear} Estudio Jurídico Lidia Cristina Baiud. Todos los
-            derechos reservados.
+            &copy; {currentYear} Estudio Jurídico Lidia Cristina Baiud. Todos
+            los derechos reservados.
           </p>
           <p>
             Ramírez de Velazco 672 · San Salvador de Jujuy ·{" "}
@@ -32,6 +32,20 @@ const Footer = () => {
               baiudlidiacristina@gmail.com
             </a>
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm sm:justify-start">
+            <Link
+              href="/abogados-en-jujuy"
+              className="font-medium text-slate-900 hover:text-amber-500"
+            >
+              Abogados en Jujuy
+            </Link>
+            <Link
+              href="/articulos"
+              className="font-medium text-slate-900 hover:text-amber-500"
+            >
+              Artículos legales
+            </Link>
+          </div>
         </div>
         <div className="flex items-center gap-3 text-slate-500">
           <a

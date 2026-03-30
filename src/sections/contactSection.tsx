@@ -10,8 +10,8 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { TbMapStar } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
 
-import Location from "../../public/location.webp";
 import { fadeIn } from "../../animation/variants";
+import Location from "../../public/location.webp";
 
 const ContactMap = dynamic(() => import("@/components/contact/ContactMap"), {
   ssr: false,
@@ -55,7 +55,7 @@ const ContactSection = () => {
               Contacto
             </span>
             <h2 className="text-3xl font-black leading-tight text-white sm:text-4xl xl:text-5xl">
-              Estudio Jurídico Lidia Cristina Baiud
+              Consultá con la Dra. Lidia Cristina Baiud en Jujuy
             </h2>
           </div>
 
@@ -69,7 +69,12 @@ const ContactSection = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-3 text-amber-50/90 lg:justify-start">
               <HiPhone size={26} className="text-amber-200" />
-              <p className="text-left leading-relaxed">+54 (388) 4881-609</p>
+              <a
+                href="tel:+543884881609"
+                className="text-left leading-relaxed hover:text-white"
+              >
+                +54 (388) 4881-609
+              </a>
             </div>
           </div>
 
@@ -80,7 +85,7 @@ const ContactSection = () => {
               endContent={<TbMapStar size={30} className="ml-2 text-yellow-900" />}
               onClick={() => {
                 window.open(
-                  "https://www.google.com/maps?q=Ram%C3%ADrez+d+%20Velazco+672,+San+Salvador+de+Jujuy+-+Jujuy",
+                  "https://www.google.com/maps?q=Ram%C3%ADrez%20de%20Velazco%20672,%20San%20Salvador%20de%20Jujuy,%20Jujuy",
                   "_blank",
                 );
               }}
@@ -110,7 +115,7 @@ const ContactSection = () => {
           <div className="hidden h-full flex-1 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 lg:block">
             <Image
               src={Location}
-              alt="Ilustración de Estudio Jurídico Baiud"
+              alt="Ubicación del Estudio Jurídico Baiud en San Salvador de Jujuy"
               sizes="100vw"
               width={0}
               height={0}

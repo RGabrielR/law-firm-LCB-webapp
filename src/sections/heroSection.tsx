@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { IoCalendarOutline } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
 
-import heroBanner from "../../public/herobanner.webp";
 import { fadeIn } from "../../animation/variants";
+import heroBanner from "../../public/herobanner.webp";
 
 const HeroSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
@@ -42,19 +42,19 @@ const HeroSection = () => {
                 Defensa legal integral
               </span>
               <h1 className="text-4xl font-black leading-tight md:text-6xl">
-                Estudio Jurídico Baiud en Jujuy
+                Abogada en Jujuy para familia, sucesiones y conflictos laborales
               </h1>
               <h2 className="text-2xl font-semibold leading-tight text-amber-300/90 md:text-3xl">
-                Especialistas en Derecho Civil, Familia y Laboral
+                Estudio Jurídico Baiud en San Salvador de Jujuy
               </h2>
               <h3 className="text-lg font-light text-slate-100/90 md:text-xl">
                 Consultas presenciales y online con la Dra. Lidia Baiud
               </h3>
               <p className="text-base font-light text-slate-100/90 md:text-lg">
-                En nuestro estudio jurídico combinamos experiencia, cercanía y
-                estrategia para proteger tus derechos. Diseñamos soluciones
-                legales a medida para particulares y empresas en cada etapa del
-                proceso.
+                Si necesitás una abogada en Jujuy para divorcio, sucesión,
+                despido, mediación o asesoramiento civil, trabajamos con
+                estrategia, cercanía y seguimiento claro desde la primera
+                consulta.
               </p>
               <Button
                 className="h-14 w-full max-w-sm rounded-full border border-amber-400/60 bg-amber-400/90 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-300 lg:justify-start"
@@ -76,7 +76,7 @@ const HeroSection = () => {
             <div className="relative hidden w-full max-w-xl overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/50 shadow-lg lg:flex lg:w-5/12">
               <Image
                 src={heroBanner}
-                alt="Dra. Lidia Cristina Baiud - Abogada especialista en Derecho Civil, Familia y Laboral en Jujuy"
+                alt="Dra. Lidia Cristina Baiud, abogada especialista en Jujuy"
                 className="h-full w-full object-cover"
                 sizes="100vw"
                 width={0}

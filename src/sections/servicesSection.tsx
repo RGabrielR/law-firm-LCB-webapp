@@ -55,12 +55,12 @@ const ServicesSection = () => {
             Servicios
           </span>
           <h2 className="text-3xl font-black text-slate-950 sm:text-4xl">
-            Soluciones legales de alto impacto para cada necesidad
+            Servicios legales en Jujuy para problemas urgentes y decisiones clave
           </h2>
           <p className="text-base font-light leading-relaxed text-slate-600 md:text-lg">
-            Trabajamos con equipos multidisciplinarios para ofrecer respuestas
-            ágiles y confiables en derecho civil, laboral, comercial y penal.
-            Cada intervención se apoya en procesos claros y reporting continuo.
+            El estudio trabaja casos de derecho civil, laboral, previsional y
+            familiar con procesos claros, tiempos de respuesta razonables y una
+            estrategia adaptada al problema concreto de cada cliente en Jujuy.
           </p>
         </div>
 

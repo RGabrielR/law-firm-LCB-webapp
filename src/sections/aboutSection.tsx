@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { TbTargetArrow } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
 
-import AboutMosaic from "../../public/aboutmosaic.webp";
 import { fadeIn } from "../../animation/variants";
+import AboutMosaic from "../../public/aboutmosaic.webp";
 
 const AboutSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
@@ -30,14 +30,14 @@ const AboutSection = () => {
               Sobre el estudio
             </span>
             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">
-              Asesoramiento jurídico profesional en San Salvador de Jujuy
+              Abogada en San Salvador de Jujuy con estrategia y trato cercano
             </h2>
           </div>
           <p className="text-center text-base font-light leading-relaxed text-slate-600 md:text-lg lg:text-left">
-            Con mucha dedicación al ejercicio profesional, acompañamos a
-            personas, familias y empresas en decisiones clave. Abordamos cada
-            caso con estrategias personalizadas, comunicación transparente y un
-            compromiso auténtico por proteger tus intereses.
+            Si buscás abogados en Jujuy para resolver una situación familiar,
+            laboral o patrimonial, el estudio acompaña a personas, familias y
+            empresas con estrategias personalizadas, comunicación transparente y
+            foco real en proteger tus intereses.
           </p>
 
           <div className="rounded-3xl bg-slate-950 p-6 text-left text-white shadow-lg">
@@ -45,11 +45,10 @@ const AboutSection = () => {
               <TbTargetArrow size={42} /> Nuestra misión
             </span>
             <p className="mt-4 text-sm font-light leading-relaxed text-slate-100 md:text-base">
-              Promovemos la justicia y el bienestar de nuestros clientes a
-              través de soluciones legales claras, efectivas y humanas. Creemos
-              que cada persona merece una defensa comprometida y cercana, por
-              eso trabajamos con integridad, preparación constante y una visión
-              estratégica de largo plazo.
+              Promovemos soluciones legales claras, efectivas y humanas para
+              cada cliente en Jujuy. La meta es que entiendas el escenario,
+              conozcas los riesgos y tomes decisiones con respaldo jurídico
+              serio desde el primer paso.
             </p>
           </div>
         </div>
@@ -57,7 +56,7 @@ const AboutSection = () => {
         <div className="grid w-full place-items-center bg-gradient-to-br from-slate-100 via-white to-amber-50 p-8 lg:w-1/2">
           <Image
             src={AboutMosaic}
-            alt="Estudio Jurídico Baiud - Oficinas y equipo profesional en San Salvador de Jujuy"
+            alt="Estudio Jurídico Baiud, oficinas y equipo profesional en San Salvador de Jujuy"
             sizes="100vw"
             width={0}
             height={0}

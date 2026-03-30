@@ -4,51 +4,26 @@ import Script from "next/script";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import JsonLd from "@/components/seo/jsonLd";
+import { absoluteUrl, createBaseSchema, siteConfig } from "@/lib/site";
 import UIProvider from "@/providers/UIProvider";
 
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  name: "Estudio Jurídico Lidia Cristina Baiud",
-  description:
-    "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud. Atención personalizada y experiencia en defensa de sus derechos.",
-  url: "https://www.estudiolcb.com.ar/",
-  image: "https://www.estudiolcb.com.ar/logo.webp",
-  telephone: "+54 388 4881609",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Ramírez de Velazco 672",
-    addressLocality: "San Salvador de Jujuy",
-    addressRegion: "Jujuy",
-    postalCode: "4600",
-    addressCountry: "AR",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -24.1841566,
-    longitude: -65.2963359,
-  },
-  openingHours: "Mo-Fr 08:00-20:00",
-  priceRange: "$$",
-  areaServed: "Jujuy, Argentina",
-  sameAs: ["https://www.facebook.com/profile.php?id=100089098967597"],
-};
-
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.estudiolcb.com.ar'),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Estudio Jurídico Baiud | Abogada en Jujuy – Derecho Civil, Familia y Laboral",
+    default: "Abogada en Jujuy | Estudio Jurídico Baiud",
     template: "%s | Estudio Jurídico Baiud",
   },
   description:
-    "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud. Atención personalizada y experiencia en defensa de sus derechos.",
+    "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, reclamos laborales y asesoramiento civil personalizado.",
   keywords: [
     "abogada en Jujuy",
-    "estudio jurídico",
+    "abogados en Jujuy",
+    "estudio jurídico en Jujuy",
     "derecho de familia",
     "derecho laboral",
     "divorcios",
@@ -57,48 +32,50 @@ export const metadata: Metadata = {
     "San Salvador de Jujuy",
     "abogados san salvador de jujuy",
     "derecho civil jujuy",
-    "derecho penal jujuy",
     "asesoría legal jujuy",
     "mediación y arbitraje",
-    "derecho comercial",
     "derecho previsional",
   ],
   category: "Legal",
-  authors: [{ name: "Estudio Jurídico Lidia Cristina Baiud" }],
+  authors: [{ name: siteConfig.legalName }],
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
-    canonical: "https://www.estudiolcb.com.ar/",
+    canonical: absoluteUrl("/"),
   },
   openGraph: {
     type: "website",
-    title: "Estudio Jurídico Baiud | Abogada en Jujuy – Derecho Civil, Familia y Laboral",
+    title: "Abogada en Jujuy | Estudio Jurídico Baiud",
     description:
-      "Estudio Jurídico en San Salvador de Jujuy especializado en Derecho Civil, Familia, Laboral y Penal. Consultas legales con la Dra. Lidia Cristina Baiud.",
-    siteName: "Estudio Jurídico Baiud",
+      "Estudio jurídico en San Salvador de Jujuy para derecho de familia, sucesiones, reclamos laborales y conflictos civiles.",
+    siteName: siteConfig.name,
     locale: "es_AR",
-    url: "https://www.estudiolcb.com.ar/",
+    url: absoluteUrl("/"),
+    images: [
+      {
+        url: absoluteUrl("/herobanner.webp"),
+        alt: "Estudio Jurídico Baiud en San Salvador de Jujuy",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Jurídico Baiud | Abogada en Jujuy",
+    title: "Abogada en Jujuy | Estudio Jurídico Baiud",
     description:
-      "Consultas legales con la Dra. Lidia Cristina Baiud. Derecho Civil, Familia, Laboral y Penal en San Salvador de Jujuy.",
+      "Consultas legales con la Dra. Lidia Cristina Baiud para familia, sucesiones, despidos y derecho civil en Jujuy.",
+    images: [absoluteUrl("/herobanner.webp")],
   },
   icons: {
     icon: "/favicon.ico",
-  },
-  verification: {
-    google: "google-site-verification-code",
   },
 };
 
@@ -113,37 +90,32 @@ export default function RootLayout({
         className={`${montserrat.className} min-h-screen bg-slate-50 text-slate-900 antialiased`}
       >
         <UIProvider>
+          <JsonLd data={createBaseSchema()} />
           <Header />
           {children}
           <Footer />
         </UIProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1CK50HM2ZS"
+          strategy="afterInteractive"
         />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1CK50HM2ZS');
+        `}</Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17663647340"
+          strategy="afterInteractive"
+        />
+        <Script id="gads-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17663647340');
+        `}</Script>
       </body>
-      {/* Google Analytics */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-1CK50HM2ZS"
-        strategy="afterInteractive"
-      />
-      <Script id="ga-init" strategy="afterInteractive">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1CK50HM2ZS');
-      `}</Script>
-      {/* Google Ads Conversion Tracking */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17663647340"
-        strategy="afterInteractive"
-      />
-      <Script id="gads-init" strategy="afterInteractive">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-17663647340');
-      `}</Script>
     </html>
   );
 }
