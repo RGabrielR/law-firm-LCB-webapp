@@ -19,7 +19,7 @@ const markerIcon = L.icon({
 const ContactMap = () => {
   const [isReady, setIsReady] = useState(false);
   const position = useMemo<LatLngExpression>(
-    () => [-24.1854821, -65.3096403],
+    () => [-24.1809252, -65.3101452],
     [],
   );
 
