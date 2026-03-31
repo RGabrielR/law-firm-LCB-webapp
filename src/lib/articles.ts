@@ -46,6 +46,16 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2026-03-30",
     modifiedAt: "2026-03-30",
   },
+  {
+    slug: "migracion-extranjeros-jujuy",
+    title:
+      "Migración y residencia en Argentina: guía completa para extranjeros en Jujuy",
+    description:
+      "Todo lo que necesitás saber sobre residencia temporaria, permanente, nacionalización y regularización migratoria en Argentina. Asesoramiento legal en Jujuy.",
+    category: "Derecho Migratorio",
+    publishedAt: "2026-03-31",
+    modifiedAt: "2026-03-31",
+  },
 ];
 
 export const articleMap = Object.fromEntries(
