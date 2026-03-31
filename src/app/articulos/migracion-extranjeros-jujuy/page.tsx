@@ -51,7 +51,7 @@ export default function MigracionExtranjerosJujuyPage() {
         ])}
       />
 
-      <article className="prose prose-slate max-w-none">
+      <article className="prose prose-slate max-w-none prose-p:leading-[2] prose-p:mb-6 prose-li:leading-[2] prose-li:mb-2">
         <div className="mb-8">
           <Link
             href="/articulos"
