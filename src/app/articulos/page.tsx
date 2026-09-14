@@ -9,7 +9,7 @@ import { absoluteUrl, createBreadcrumbSchema, siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Artículos legales en Jujuy",
   description:
-    "Guías legales sobre divorcio, sucesiones, despidos, comercio exterior y aduana, minería, tabaco y actualidad jurídica en Jujuy publicadas por el Estudio Jurídico Baiud.",
+    "Guías legales sobre divorcio, sucesiones, despidos, comercio exterior y aduana, minería, tabaco y actualidad jurídica en Jujuy publicadas por el Estudio Jurídico LCB.",
   keywords: [
     "artículos legales jujuy",
     "abogada jujuy blog",

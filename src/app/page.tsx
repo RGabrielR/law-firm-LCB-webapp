@@ -12,7 +12,7 @@ export default function Home() {
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Inicio | Estudio Jurídico Baiud",
+    name: "Inicio | Estudio Jurídico LCB",
     url: absoluteUrl("/"),
     description:
       "Página principal del Estudio Jurídico Baiud con servicios legales en Jujuy, contacto, contenido local y preguntas frecuentes.",

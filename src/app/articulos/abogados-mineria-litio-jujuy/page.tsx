@@ -56,7 +56,7 @@ export default function MineriaLitioJujuyPage() {
           { name: "Inicio", path: "/" },
           { name: "Artículos", path: "/articulos" },
           {
-            name: "Minería y litio en Jujuy",
+            name: "Guía de la minería jujeña",
             path: `/articulos/${article.slug}`,
           },
         ])}
@@ -76,8 +76,7 @@ export default function MineriaLitioJujuyPage() {
         </span>
 
         <h1 className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-5xl">
-          Abogados de minería en Jujuy: litio, concesiones, superficiarios y
-          comunidades
+          {article.title}
         </h1>
 
         <ArticleByline article={article} />

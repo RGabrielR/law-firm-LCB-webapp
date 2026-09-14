@@ -4,7 +4,8 @@ export type FaqItem = {
 };
 
 export const siteConfig = {
-  name: "Estudio Jurídico Baiud",
+  name: "Estudio Jurídico LCB",
+  alternateNames: ["Estudio Jurídico Baiud", "Estudio LCB"],
   legalName: "Estudio Jurídico Lidia Cristina Baiud",
   description:
     "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, reclamos laborales, comercio exterior y aduana, minería y productores tabacaleros.",
@@ -136,6 +137,7 @@ export function createBaseSchema() {
         "@id": absoluteUrl("/#website"),
         url: siteConfig.url,
         name: siteConfig.name,
+        alternateName: siteConfig.alternateNames,
         description: siteConfig.description,
         inLanguage: "es-AR",
       },
@@ -143,6 +145,7 @@ export function createBaseSchema() {
         "@type": "Organization",
         "@id": absoluteUrl("/#organization"),
         name: siteConfig.legalName,
+        alternateName: [siteConfig.name, ...siteConfig.alternateNames],
         url: siteConfig.url,
         email: siteConfig.email,
         telephone: siteConfig.phoneDisplay,
@@ -171,6 +174,7 @@ export function createBaseSchema() {
         "@type": "LegalService",
         "@id": absoluteUrl("/#legalservice"),
         name: siteConfig.legalName,
+        alternateName: [siteConfig.name, ...siteConfig.alternateNames],
         url: siteConfig.url,
         image: absoluteUrl("/herobanner.webp"),
         description: siteConfig.description,

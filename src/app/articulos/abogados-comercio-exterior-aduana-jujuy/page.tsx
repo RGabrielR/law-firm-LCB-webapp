@@ -56,7 +56,7 @@ export default function ComercioExteriorAduanaJujuyPage() {
           { name: "Inicio", path: "/" },
           { name: "Artículos", path: "/articulos" },
           {
-            name: "Comercio exterior y aduana en Jujuy",
+            name: "Guía del comercio exterior jujeño",
             path: `/articulos/${article.slug}`,
           },
         ])}
@@ -76,8 +76,7 @@ export default function ComercioExteriorAduanaJujuyPage() {
         </span>
 
         <h1 className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-5xl">
-          Abogados de comercio exterior en Jujuy: importación, exportación y
-          aduana
+          {article.title}
         </h1>
 
         <ArticleByline article={article} />

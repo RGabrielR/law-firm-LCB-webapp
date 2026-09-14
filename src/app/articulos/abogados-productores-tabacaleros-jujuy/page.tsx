@@ -56,7 +56,7 @@ export default function ProductoresTabacalerosJujuyPage() {
           { name: "Inicio", path: "/" },
           { name: "Artículos", path: "/articulos" },
           {
-            name: "Productores tabacaleros en Jujuy",
+            name: "Guía del tabaco jujeño",
             path: `/articulos/${article.slug}`,
           },
         ])}
@@ -76,8 +76,7 @@ export default function ProductoresTabacalerosJujuyPage() {
         </span>
 
         <h1 className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-5xl">
-          Abogados para productores tabacaleros en Jujuy: FET, contratos, campo
-          y trabajo rural
+          {article.title}
         </h1>
 
         <ArticleByline article={article} />

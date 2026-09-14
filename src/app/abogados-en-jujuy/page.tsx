@@ -14,7 +14,7 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Abogados en Jujuy | Estudio Jurídico Baiud",
+  title: "Abogados en Jujuy",
   description:
     "Abogados en Jujuy para divorcios, sucesiones, despidos, comercio exterior y aduana, minería y productores tabacaleros. Consultá con la Dra. Lidia Cristina Baiud en San Salvador de Jujuy.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: absoluteUrl("/abogados-en-jujuy"),
-    title: "Abogados en Jujuy | Estudio Jurídico Baiud",
+    title: "Abogados en Jujuy | Estudio Jurídico LCB",
     description:
       "Asesoramiento legal en Jujuy para familia, sucesiones, reclamos laborales, comercio exterior y aduana, minería y productores tabacaleros.",
     siteName: siteConfig.name,
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: absoluteUrl("/herobanner.webp"),
-        alt: "Estudio Jurídico Baiud en San Salvador de Jujuy",
+        alt: "Estudio Jurídico LCB en San Salvador de Jujuy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abogados en Jujuy | Estudio Jurídico Baiud",
+    title: "Abogados en Jujuy | Estudio Jurídico LCB",
     description:
       "Abogados en Jujuy para divorcios, sucesiones, despidos y asesoramiento legal integral.",
     images: [absoluteUrl("/herobanner.webp")],

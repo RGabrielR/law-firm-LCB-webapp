@@ -9,7 +9,7 @@ export type ArticleMeta = {
   category: string;
   publishedAt: string;
   modifiedAt: string;
-  // Título corto para <title>: el layout le agrega " | Estudio Jurídico Baiud".
+  // Título corto para <title>: el layout le agrega " | Estudio Jurídico LCB".
   seoTitle?: string;
   keywords?: string[];
 };
@@ -66,8 +66,8 @@ export const articles: ArticleMeta[] = [
   {
     slug: "abogados-comercio-exterior-aduana-jujuy",
     title:
-      "Abogados de comercio exterior en Jujuy: importación, exportación y aduana",
-    seoTitle: "Abogados de comercio exterior y aduana en Jujuy",
+      "Guía legal del comercio exterior jujeño: importar y exportar por La Quiaca, Jama y Perico",
+    seoTitle: "Guía legal del comercio exterior jujeño y la Aduana",
     description:
       "Guía legal para importar y exportar desde Jujuy: alta como importador ante ARCA, Código Aduanero, Zona Franca Perico, multas, secuestro de mercadería y cómo defenderte.",
     category: "Comercio Exterior y Aduana",
@@ -91,8 +91,8 @@ export const articles: ArticleMeta[] = [
   {
     slug: "abogados-mineria-litio-jujuy",
     title:
-      "Abogados de minería en Jujuy: litio, concesiones, superficiarios y comunidades",
-    seoTitle: "Abogados de minería y litio en Jujuy",
+      "Guía legal de la minería jujeña: litio en la Puna, concesiones, superficiarios y comunidades",
+    seoTitle: "Guía legal de la minería jujeña: litio y concesiones",
     description:
       "Guía de derecho minero en Jujuy: cateos y concesiones ante el Juzgado Administrativo de Minas, servidumbres, derechos de superficiarios y comunidades, RIGI y proveedores del litio.",
     category: "Derecho Minero",
@@ -116,8 +116,8 @@ export const articles: ArticleMeta[] = [
   {
     slug: "abogados-productores-tabacaleros-jujuy",
     title:
-      "Abogados para productores tabacaleros en Jujuy: FET, contratos, campo y trabajo rural",
-    seoTitle: "Abogados para productores de tabaco en Jujuy",
+      "Guía legal del tabaco jujeño: FET, acopio, fincas y trabajo rural",
+    seoTitle: "Guía legal del tabaco jujeño: FET, acopio y fincas",
     description:
       "Guía legal para productores de tabaco en Jujuy: reclamos por el Fondo Especial del Tabaco, liquidaciones de acopio, arriendos, trabajadores rurales, sucesiones de fincas y deudas del campo.",
     category: "Derecho Agrario",
