@@ -178,11 +178,13 @@ export default function SucesionHerenciaJujuyPage() {
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900">
-            5. Pago de deudas e impuestos
+            5. Pago de deudas y gastos del proceso
           </h3>
           <p>
-            Se cancelan las deudas del causante y se pagan los impuestos
-            correspondientes (impuesto a la transmisión gratuita de bienes).
+            Se cancelan las deudas del causante y se pagan la tasa de justicia y
+            los gastos del trámite. En Jujuy no se cobra impuesto a la herencia;
+            ese impuesto existe en la provincia de Buenos Aires, así que puede
+            corresponder si hay bienes ubicados allí.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900">
@@ -250,8 +252,8 @@ export default function SucesionHerenciaJujuyPage() {
           </ul>
 
           <p>
-            Los costos incluyen honorarios profesionales, tasas judiciales,
-            impuestos sucesorios, publicación de edictos y gastos administrativos.
+            Los costos incluyen honorarios profesionales, tasa de justicia,
+            publicación de edictos y gastos administrativos.
             En el Estudio Jurídico LCB te brindamos un presupuesto claro y
             transparente desde la primera consulta.
           </p>

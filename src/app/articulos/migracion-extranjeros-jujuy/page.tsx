@@ -280,16 +280,19 @@ export default function MigracionExtranjerosJujuyPage() {
           </p>
 
           <h2 className="mt-12 text-3xl font-bold text-slate-950">
-            Regularización migratoria y el Programa Patria Grande
+            Regularización migratoria para nacionales del MERCOSUR
           </h2>
 
           <p>
             Muchos extranjeros se encuentran en situación migratoria irregular,
             ya sea porque ingresaron al país sin documentación o porque su
-            residencia venció sin renovarse. Argentina cuenta con mecanismos de
-            regularización, entre ellos el{" "}
-            <strong>Programa Patria Grande</strong>, que facilita el proceso para
-            nacionales de países del MERCOSUR y asociados.
+            residencia venció sin renovarse. La{" "}
+            <strong>Ley de Migraciones 25.871</strong> y el{" "}
+            <strong>Acuerdo de Residencia del MERCOSUR</strong> permiten que los
+            nacionales de países del MERCOSUR y asociados tramiten su residencia
+            acreditando su nacionalidad y la falta de antecedentes penales. Entre
+            2006 y 2010 funcionó además el Programa Patria Grande, un operativo
+            especial de regularización que hoy ya no está vigente.
           </p>
 
           <p>

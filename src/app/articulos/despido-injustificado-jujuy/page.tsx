@@ -216,8 +216,9 @@ export default function DespidoInjustificadoJujuyPage() {
 
           <ul>
             <li>
-              <strong>30 días corridos:</strong> Plazo para enviar carta documento
-              reclamando las diferencias si la liquidación es incorrecta.
+              <strong>Lo antes posible:</strong> conviene intimar al empleador
+              por carta documento apenas detectás diferencias en la liquidación
+              o falta de pago. Esperar complica la prueba y la negociación.
             </li>
             <li>
               <strong>2 años:</strong> Plazo de prescripción para iniciar un
@@ -258,26 +259,28 @@ export default function DespidoInjustificadoJujuyPage() {
             3. Enviá carta documento si hay diferencias
           </h3>
           <p>
-            Si la liquidación es incorrecta o no te pagan, debemos intimar al
-            empleador mediante carta documento dentro de los 30 días.
+            Si la liquidación es incorrecta o no te pagan, conviene intimar al
+            empleador mediante carta documento cuanto antes, detallando los
+            rubros que se reclaman.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900">
-            4. Intentá una conciliación en SECLO
+            4. Buscá un acuerdo antes del juicio
           </h3>
           <p>
-            Antes de iniciar un juicio, es obligatorio intentar una conciliación
-            ante el Servicio de Conciliación Laboral Obligatoria (SECLO) en
-            Jujuy. Muchos casos se resuelven en esta etapa.
+            Muchos reclamos se resuelven con una negociación o una audiencia de
+            conciliación, ya sea ante la autoridad laboral de la provincia o
+            dentro del propio proceso judicial. Según el caso, definimos cuál es
+            la vía más conveniente en Jujuy.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900">
             5. Iniciá acción judicial si no hay acuerdo
           </h3>
           <p>
-            Si no se llega a un acuerdo en SECLO, iniciamos demanda judicial ante
-            el Juzgado del Trabajo de San Salvador de Jujuy para reclamar todas
-            las indemnizaciones adeudadas.
+            Si no se llega a un acuerdo, iniciamos la demanda ante la Justicia
+            del Trabajo de Jujuy para reclamar todas las indemnizaciones
+            adeudadas.
           </p>
 
           <h2 className="mt-12 text-3xl font-bold text-slate-950">
@@ -320,7 +323,8 @@ export default function DespidoInjustificadoJujuyPage() {
 
           <ul>
             <li>
-              <strong>Conciliación en SECLO:</strong> 1 a 3 meses
+              <strong>Acuerdo o conciliación:</strong> puede resolverse en pocos
+              meses
             </li>
             <li>
               <strong>Juicio laboral completo:</strong> 12 a 24 meses en promedio
