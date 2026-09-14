@@ -2,28 +2,20 @@
 
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import { motion } from "framer-motion";
 import { IoCalendarOutline } from "react-icons/io5";
-import { useInView } from "react-intersection-observer";
 
-import { fadeIn } from "../../animation/variants";
+import { siteConfig } from "@/lib/site";
 import heroBanner from "../../public/herobanner.webp";
 
+// Sin animación de entrada: es lo primero que se ve, y con opacity:0 inicial
+// quedaba invisible hasta que terminaba de cargar el JavaScript.
 const HeroSection = () => {
-  const [ref, inView] = useInView({ triggerOnce: false });
-
   return (
     <section
-      ref={ref}
       className="relative mx-auto flex w-full items-center justify-center overflow-hidden rounded-b-3xl bg-slate-950 py-16 text-white shadow-2xl 3xl:max-w-[1580px]"
       id="Home"
     >
-      <motion.div
-        variants={fadeIn("up", 0)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        exit="hidden"
-      >
+      <div>
         <div className="flex items-center justify-center">
           <div className="relative flex w-full flex-col items-center justify-center gap-12 px-6 lg:flex-row lg:px-12">
             <div className="absolute inset-0 opacity-30">
@@ -62,12 +54,10 @@ const HeroSection = () => {
                 endContent={
                   <IoCalendarOutline size={30} className="ml-2 text-slate-950" />
                 }
-                onClick={() => {
-                  window.open(
-                    "https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0",
-                    "_blank",
-                  );
-                }}
+                as="a"
+                href={siteConfig.social.whatsapp}
+                target="_blank"
+                rel="noreferrer"
               >
                 Agendar consulta
               </Button>
@@ -86,7 +76,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

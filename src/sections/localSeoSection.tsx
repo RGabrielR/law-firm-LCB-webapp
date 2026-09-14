@@ -7,7 +7,7 @@ const LocalSeoSection = () => {
     <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-20 xl:max-w-[1380px]">
       <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-2xl lg:p-12">
         <span className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-300">
-          SEO local
+          Atención en Jujuy
         </span>
         <h2 className="mt-4 max-w-4xl text-3xl font-black leading-tight sm:text-4xl">
           Abogada en Jujuy para familia, sucesiones, despidos, comercio

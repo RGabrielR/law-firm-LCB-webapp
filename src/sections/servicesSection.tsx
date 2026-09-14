@@ -6,6 +6,8 @@ import Link from "next/link";
 import { IoCalendarOutline } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
 
+import { siteConfig } from "@/lib/site";
+
 import { fadeIn } from "../../animation/variants";
 
 const services: { title: string; text: string; href?: string }[] = [
@@ -112,12 +114,10 @@ const ServicesSection = () => {
           endContent={
             <IoCalendarOutline size={30} className="ml-2 text-slate-950" />
           }
-          onClick={() => {
-            window.open(
-              "https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0",
-              "_blank",
-            );
-          }}
+          as="a"
+          href={siteConfig.social.whatsapp}
+          target="_blank"
+          rel="noreferrer"
         >
           Reservar una consulta
         </Button>

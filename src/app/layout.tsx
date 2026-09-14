@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 
+import ContactTracking from "@/components/analytics/contactTracking";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import JsonLd from "@/components/seo/jsonLd";
@@ -103,6 +104,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </UIProvider>
+        <ContactTracking />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1CK50HM2ZS"
           strategy="afterInteractive"

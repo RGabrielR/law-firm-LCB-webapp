@@ -13,9 +13,8 @@ const FaqSection = () => {
           Respuestas directas para quienes buscan asesoramiento legal en Jujuy
         </h2>
         <p className="mx-auto max-w-3xl text-base font-light leading-relaxed text-slate-600 md:text-lg">
-          Esta sección refuerza las consultas más habituales que llegan al
-          estudio y ayuda a que Google entienda mejor qué problemas legales
-          resuelve el sitio.
+          Las consultas más habituales que llegan al estudio, respondidas de
+          forma simple antes de la primera reunión.
         </p>
       </div>
 
