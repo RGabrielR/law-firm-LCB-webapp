@@ -17,8 +17,12 @@ function contactMethod(href: string) {
   return null;
 }
 
-// Registra en Google Analytics cada clic a WhatsApp, teléfono o mail como
-// evento "generate_lead", para medir cuántas consultas trae cada campaña.
+// Conversión "Consulta por WhatsApp, teléfono o mail" de la cuenta de Google
+// Ads del estudio (la etiqueta AW-17663647340 ya se carga en el layout).
+const ADS_CONVERSION = "AW-17663647340/E9iPCIvL8fccEOy81-ZB";
+
+// Registra cada clic a WhatsApp, teléfono o mail: en Google Analytics como
+// "generate_lead" y en Google Ads como conversión, para medir las campañas.
 const ContactTracking = () => {
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
@@ -32,6 +36,11 @@ const ContactTracking = () => {
       window.gtag?.("event", "generate_lead", {
         method,
         page_path: window.location.pathname,
+      });
+      window.gtag?.("event", "conversion", {
+        send_to: ADS_CONVERSION,
+        value: 1.0,
+        currency: "ARS",
       });
     };
 
