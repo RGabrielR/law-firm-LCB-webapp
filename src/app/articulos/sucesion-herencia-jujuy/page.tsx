@@ -49,7 +49,7 @@ export default function SucesionHerenciaJujuyPage() {
           El trámite de sucesión es un proceso legal necesario para transferir
           los bienes de una persona fallecida a sus herederos. En esta guía te
           explicamos paso a paso cómo realizar el trámite sucesorio en la
-          provincia de Jujuy y cómo el Estudio Jurídico Baiud puede asistirte
+          provincia de Jujuy y cómo el Estudio Jurídico LCB puede asistirte
           durante todo el proceso.
         </p>
 
@@ -218,7 +218,7 @@ export default function SucesionHerenciaJujuyPage() {
         <p>
           Los costos incluyen honorarios profesionales, tasas judiciales,
           impuestos sucesorios, publicación de edictos y gastos administrativos.
-          En el Estudio Jurídico Baiud te brindamos un presupuesto claro y
+          En el Estudio Jurídico LCB te brindamos un presupuesto claro y
           transparente desde la primera consulta.
         </p>
 
@@ -248,7 +248,7 @@ export default function SucesionHerenciaJujuyPage() {
         </ul>
 
         <h2 className="mt-12 text-3xl font-bold text-slate-950">
-          ¿Por qué elegir al Estudio Jurídico Baiud para tu sucesión?
+          ¿Por qué elegir al Estudio Jurídico LCB para tu sucesión?
         </h2>
 
         <p>
@@ -271,7 +271,7 @@ export default function SucesionHerenciaJujuyPage() {
             ¿Necesitás iniciar un trámite sucesorio?
           </h3>
           <p className="mt-4 text-base font-light text-slate-700">
-            Contactá al Estudio Baiud para una consulta personalizada. Te
+            Contactá al Estudio LCB para una consulta personalizada. Te
             acompañamos en cada etapa del proceso sucesorio con profesionalismo y
             cercanía.
           </p>

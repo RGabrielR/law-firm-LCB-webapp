@@ -57,7 +57,7 @@ const Header = () => {
           <NavbarBrand>
             <Image
               src={Logo}
-              alt="Logo de Estudio Jurídico Baiud"
+              alt="Logo de Estudio Jurídico LCB"
               sizes="100vw"
               height={0}
               width={0}

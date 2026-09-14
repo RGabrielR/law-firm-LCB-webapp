@@ -245,7 +245,7 @@ export default function MineriaLitioJujuyPage() {
             </li>
           </ul>
 
-          <h2>Cómo te acompaña el Estudio Jurídico Baiud</h2>
+          <h2>Cómo te acompaña el Estudio Jurídico LCB</h2>
           <ul>
             <li>
               Trámites y oposiciones ante el Juzgado Administrativo de Minas.

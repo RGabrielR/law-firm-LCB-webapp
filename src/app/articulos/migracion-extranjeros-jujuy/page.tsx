@@ -74,7 +74,7 @@ export default function MigracionExtranjerosJujuyPage() {
           Si sos extranjero y querés vivir, trabajar o establecerte legalmente en
           Argentina, entender el sistema migratorio es el primer paso. En esta
           guía te explicamos los tipos de residencia, los requisitos para
-          obtener la nacionalidad y cómo el Estudio Jurídico Baiud puede
+          obtener la nacionalidad y cómo el Estudio Jurídico LCB puede
           acompañarte en cada etapa del proceso.
         </p>
 
@@ -386,7 +386,7 @@ export default function MigracionExtranjerosJujuyPage() {
             ciudadanía argentina?
           </h3>
           <p className="mt-4 text-base font-light text-slate-700">
-            Contactá al Estudio Baiud para una consulta personalizada. Te
+            Contactá al Estudio LCB para una consulta personalizada. Te
             asesoramos en cada etapa del trámite para que puedas establecerte
             legalmente en Argentina con seguridad y tranquilidad.
           </p>

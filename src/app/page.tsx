@@ -15,7 +15,7 @@ export default function Home() {
     name: "Inicio | Estudio Jurídico LCB",
     url: absoluteUrl("/"),
     description:
-      "Página principal del Estudio Jurídico Baiud con servicios legales en Jujuy, contacto, contenido local y preguntas frecuentes.",
+      "Página principal del Estudio Jurídico LCB con servicios legales en Jujuy, contacto, contenido local y preguntas frecuentes.",
     isPartOf: {
       "@id": absoluteUrl("/#website"),
     },

@@ -254,7 +254,7 @@ export default function ComercioExteriorAduanaJujuyPage() {
             firme la multa.
           </p>
 
-          <h2>Cómo te acompaña el Estudio Jurídico Baiud</h2>
+          <h2>Cómo te acompaña el Estudio Jurídico LCB</h2>
           <ul>
             <li>
               <strong>Prevención</strong>: revisión de contratos

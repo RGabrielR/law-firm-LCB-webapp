@@ -45,7 +45,7 @@ export default function ArticulosPage() {
     name: "Artículos legales en Jujuy",
     url: absoluteUrl("/articulos"),
     description:
-      "Colección de artículos del Estudio Jurídico Baiud sobre derecho de familia, sucesiones, derecho laboral, comercio exterior, minería y tabaco en Jujuy.",
+      "Colección de artículos del Estudio Jurídico LCB sobre derecho de familia, sucesiones, derecho laboral, comercio exterior, minería y tabaco en Jujuy.",
     hasPart: articles.map((article) => ({
       "@type": "Article",
       headline: article.title,

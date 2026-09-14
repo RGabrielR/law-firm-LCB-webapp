@@ -115,7 +115,7 @@ const ContactSection = () => {
           <div className="hidden h-full flex-1 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 lg:block">
             <Image
               src={Location}
-              alt="Ubicación del Estudio Jurídico Baiud en San Salvador de Jujuy"
+              alt="Ubicación del Estudio Jurídico LCB en San Salvador de Jujuy"
               sizes="100vw"
               width={0}
               height={0}

@@ -93,7 +93,7 @@ export const lawyersInJujuyFaqs: FaqItem[] = [
       "Conviene buscar experiencia en la materia, claridad para explicar el proceso, una estrategia concreta para el caso y atención profesional en Jujuy con conocimiento del contexto local.",
   },
   {
-    question: "¿Qué temas legales atiende el Estudio Jurídico Baiud en Jujuy?",
+    question: "¿Qué temas legales atiende el Estudio Jurídico LCB en Jujuy?",
     answer:
       "El estudio trabaja derecho de familia, sucesiones, despidos, reclamos laborales, mediación, trámites previsionales y asesoramiento civil, además de comercio exterior y aduana, derecho minero y derecho agrario para productores tabacaleros.",
   },

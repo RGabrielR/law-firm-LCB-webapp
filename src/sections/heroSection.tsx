@@ -45,7 +45,7 @@ const HeroSection = () => {
                 Abogada en Jujuy para familia, sucesiones y conflictos laborales
               </h1>
               <h2 className="text-2xl font-semibold leading-tight text-amber-300/90 md:text-3xl">
-                Estudio Jurídico Baiud en San Salvador de Jujuy
+                Estudio Jurídico LCB en San Salvador de Jujuy
               </h2>
               <h3 className="text-lg font-light text-slate-100/90 md:text-xl">
                 Consultas presenciales y online con la Dra. Lidia Baiud

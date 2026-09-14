@@ -219,7 +219,7 @@ export default function ProductoresTabacalerosJujuyPage() {
             o proveedores, embargos y, en casos graves, concursos preventivos.
           </p>
 
-          <h2>Cómo te acompaña el Estudio Jurídico Baiud</h2>
+          <h2>Cómo te acompaña el Estudio Jurídico LCB</h2>
           <ul>
             <li>Reclamos por el FET, aportes y liquidaciones de acopio.</li>
             <li>Redacción y revisión de contratos de arriendo y aparcería.</li>

@@ -15,7 +15,7 @@ const LocalSeoSection = () => {
         </h2>
         <p className="mt-4 max-w-4xl text-base font-light leading-relaxed text-slate-200 md:text-lg">
           Si buscás abogados en Jujuy, necesitás una respuesta clara desde el
-          primer contacto. El Estudio Jurídico Baiud acompaña consultas
+          primer contacto. El Estudio Jurídico LCB acompaña consultas
           presenciales en San Salvador de Jujuy y también casos de otras
           localidades de la provincia, con foco en estrategia, documentación y
           seguimiento real del expediente.

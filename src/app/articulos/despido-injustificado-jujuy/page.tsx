@@ -203,7 +203,7 @@ export default function DespidoInjustificadoJujuyPage() {
           2. Consultá con un abogado laboralista
         </h3>
         <p>
-          En el Estudio Jurídico Baiud analizamos tu situación particular,
+          En el Estudio Jurídico LCB analizamos tu situación particular,
           revisamos la liquidación ofrecida y te orientamos sobre el mejor curso
           de acción.
         </p>
@@ -282,12 +282,12 @@ export default function DespidoInjustificadoJujuyPage() {
         </ul>
 
         <p>
-          En el Estudio Jurídico Baiud trabajamos para agilizar los trámites y
+          En el Estudio Jurídico LCB trabajamos para agilizar los trámites y
           buscar soluciones eficientes que protejan tus derechos.
         </p>
 
         <h2 className="mt-12 text-3xl font-bold text-slate-950">
-          ¿Por qué elegir al Estudio Jurídico Baiud?
+          ¿Por qué elegir al Estudio Jurídico LCB?
         </h2>
 
         <p>
@@ -310,7 +310,7 @@ export default function DespidoInjustificadoJujuyPage() {
             ¿Fuiste despedido injustificadamente?
           </h3>
           <p className="mt-4 text-base font-light text-slate-700">
-            Contactá al Estudio Baiud para una consulta personalizada. Defendemos
+            Contactá al Estudio LCB para una consulta personalizada. Defendemos
             tus derechos laborales y te acompañamos en cada etapa del proceso
             hasta lograr la compensación que te corresponde.
           </p>

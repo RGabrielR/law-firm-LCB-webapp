@@ -56,7 +56,7 @@ const AboutSection = () => {
         <div className="grid w-full place-items-center bg-gradient-to-br from-slate-100 via-white to-amber-50 p-8 lg:w-1/2">
           <Image
             src={AboutMosaic}
-            alt="Estudio Jurídico Baiud, oficinas y equipo profesional en San Salvador de Jujuy"
+            alt="Estudio Jurídico LCB, oficinas y equipo profesional en San Salvador de Jujuy"
             sizes="100vw"
             width={0}
             height={0}

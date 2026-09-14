@@ -12,7 +12,7 @@ const Footer = () => {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src={Logo}
-            alt="Estudio Jurídico Baiud"
+            alt="Estudio Jurídico LCB"
             width={160}
             height={60}
             className="h-auto w-40 object-contain"

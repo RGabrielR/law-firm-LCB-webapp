@@ -64,7 +64,7 @@ export default function DivorcionEnJujuyPage() {
           El proceso de divorcio puede resultar complejo y emocionalmente
           desafiante. En esta guía te explicamos todos los aspectos legales del
           divorcio en la provincia de Jujuy, los requisitos necesarios y cómo
-          el Estudio Jurídico Baiud puede acompañarte durante todo el proceso.
+          el Estudio Jurídico LCB puede acompañarte durante todo el proceso.
         </p>
 
         <h2 className="mt-12 text-3xl font-bold text-slate-950">
@@ -121,7 +121,7 @@ export default function DivorcionEnJujuyPage() {
         </h3>
         <p>
           Es fundamental contar con asesoramiento profesional desde el inicio.
-          En el Estudio Jurídico Baiud analizamos tu situación particular y te
+          En el Estudio Jurídico LCB analizamos tu situación particular y te
           orientamos sobre la mejor estrategia legal.
         </p>
 
@@ -198,13 +198,13 @@ export default function DivorcionEnJujuyPage() {
 
         <p>
           Los costos incluyen honorarios profesionales, tasas judiciales y
-          gastos administrativos. En el Estudio Jurídico Baiud ofrecemos
+          gastos administrativos. En el Estudio Jurídico LCB ofrecemos
           consultas iniciales para evaluar tu caso y brindarte un presupuesto
           transparente.
         </p>
 
         <h2 className="mt-12 text-3xl font-bold text-slate-950">
-          ¿Por qué elegir al Estudio Jurídico Baiud?
+          ¿Por qué elegir al Estudio Jurídico LCB?
         </h2>
 
         <p>
@@ -220,7 +220,7 @@ export default function DivorcionEnJujuyPage() {
             ¿Necesitás iniciar un proceso de divorcio?
           </h3>
           <p className="mt-4 text-base font-light text-slate-700">
-            Contactá al Estudio Baiud para una consulta personalizada. Estamos
+            Contactá al Estudio LCB para una consulta personalizada. Estamos
             aquí para acompañarte en cada etapa del proceso y defender tus
             derechos.
           </p>

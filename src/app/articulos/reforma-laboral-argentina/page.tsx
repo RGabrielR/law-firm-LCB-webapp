@@ -407,7 +407,7 @@ export default function ReformaLaboralArgentinaPage() {
           <p className="mt-4 text-base font-light text-slate-700">
             La Ley 27.802 abre una ventana para regularizar relaciones laborales
             informales con condonación de multas y planes de pago de hasta 72
-            cuotas. El Estudio Baiud te guía en el proceso para que aproveches
+            cuotas. El Estudio LCB te guía en el proceso para que aproveches
             este beneficio antes de que cierre el plazo, y sin cometer errores
             que después te cuesten más caro.
           </p>
