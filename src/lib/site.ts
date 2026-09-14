@@ -7,7 +7,7 @@ export const siteConfig = {
   name: "Estudio Jurídico Baiud",
   legalName: "Estudio Jurídico Lidia Cristina Baiud",
   description:
-    "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, reclamos laborales, mediación y asesoramiento legal integral.",
+    "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, reclamos laborales, comercio exterior y aduana, minería y productores tabacaleros.",
   url: "https://www.estudiolcb.com.ar",
   email: "baiudlidiacristina@gmail.com",
   phoneDisplay: "+54 (388) 4881-609",
@@ -39,6 +39,9 @@ export const practiceAreas = [
   "Derecho civil",
   "Mediación y arbitraje",
   "Derecho previsional",
+  "Comercio exterior y aduana",
+  "Derecho minero",
+  "Derecho agrario y tabacalero",
 ];
 
 export const serviceAreas = [
@@ -46,7 +49,10 @@ export const serviceAreas = [
   "Palpalá",
   "Perico",
   "El Carmen",
+  "Monterrico",
   "Libertador General San Martín",
+  "La Quiaca",
+  "Susques",
   "Toda la provincia de Jujuy",
 ];
 
@@ -67,6 +73,12 @@ export const homeFaqs: FaqItem[] = [
       "Sí. Se acompaña todo el trámite sucesorio, desde la documentación inicial hasta la declaratoria de herederos, inventario, partición e inscripción de bienes.",
   },
   {
+    question:
+      "¿Atienden casos de comercio exterior, minería o productores de tabaco en Jujuy?",
+    answer:
+      "Sí. El estudio asesora a importadores y exportadores ante la Aduana, a superficiarios, proveedores y trabajadores vinculados a la minería del litio, y a productores tabacaleros en reclamos por el FET, arriendos, trabajadores rurales y sucesiones de fincas.",
+  },
+  {
     question: "¿Las consultas pueden ser presenciales y online?",
     answer:
       "Sí. Se ofrecen consultas presenciales en San Salvador de Jujuy y también asesoramiento online para personas que necesitan una primera orientación legal sin trasladarse.",
@@ -82,7 +94,17 @@ export const lawyersInJujuyFaqs: FaqItem[] = [
   {
     question: "¿Qué temas legales atiende el Estudio Jurídico Baiud en Jujuy?",
     answer:
-      "El estudio trabaja principalmente derecho de familia, sucesiones, despidos, reclamos laborales, mediación, trámites previsionales y asesoramiento civil.",
+      "El estudio trabaja derecho de familia, sucesiones, despidos, reclamos laborales, mediación, trámites previsionales y asesoramiento civil, además de comercio exterior y aduana, derecho minero y derecho agrario para productores tabacaleros.",
+  },
+  {
+    question: "¿Hay abogados en Jujuy para problemas con la Aduana?",
+    answer:
+      "Sí. El estudio interviene en secuestros de mercadería, multas por declaración inexacta, sumarios aduaneros, cargos tributarios y contratos de importación y exportación, en coordinación con el despachante de aduana.",
+  },
+  {
+    question: "¿Qué abogado consultar por una servidumbre minera o un campo en zona de litio?",
+    answer:
+      "Conviene un abogado con conocimiento del Código de Minería y del procedimiento ante el Juzgado Administrativo de Minas de Jujuy, que pueda revisar el acuerdo, la indemnización y la situación del título del campo antes de firmar.",
   },
   {
     question: "¿Atienden clientes fuera de San Salvador de Jujuy?",

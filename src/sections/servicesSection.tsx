@@ -2,12 +2,13 @@
 
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { IoCalendarOutline } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
 
 import { fadeIn } from "../../animation/variants";
 
-const services: { title: string; text: string }[] = [
+const services: { title: string; text: string; href?: string }[] = [
   {
     title: "Consultas legales presenciales y online",
     text: "Diagnóstico integral y orientación clara para resolver dudas legales urgentes o planificar estrategias a largo plazo desde cualquier lugar.",
@@ -31,6 +32,21 @@ const services: { title: string; text: string }[] = [
   {
     title: "Mediación y arbitraje",
     text: "Resolución alternativa de conflictos para alcanzar acuerdos eficientes y evitar procesos judiciales prolongados.",
+  },
+  {
+    title: "Comercio exterior y aduana",
+    text: "Asesoramiento a importadores y exportadores de Jujuy: secuestro de mercadería, multas y sumarios aduaneros, contratos internacionales y Zona Franca Perico.",
+    href: "/articulos/abogados-comercio-exterior-aduana-jujuy",
+  },
+  {
+    title: "Derecho minero y litio",
+    text: "Trámites ante el Juzgado Administrativo de Minas, servidumbres e indemnizaciones para superficiarios y contratos de proveedores de la minería.",
+    href: "/articulos/abogados-mineria-litio-jujuy",
+  },
+  {
+    title: "Productores tabacaleros",
+    text: "Reclamos por el Fondo Especial del Tabaco, liquidaciones de acopio, arriendos de fincas, trabajadores rurales y sucesiones del campo.",
+    href: "/articulos/abogados-productores-tabacaleros-jujuy",
   },
 ];
 
@@ -59,8 +75,10 @@ const ServicesSection = () => {
           </h2>
           <p className="text-base font-light leading-relaxed text-slate-600 md:text-lg">
             El estudio trabaja casos de derecho civil, laboral, previsional y
-            familiar con procesos claros, tiempos de respuesta razonables y una
-            estrategia adaptada al problema concreto de cada cliente en Jujuy.
+            familiar, y acompaña a los sectores que mueven la economía de la
+            provincia: comercio exterior, minería y tabaco. Procesos claros,
+            tiempos de respuesta razonables y una estrategia adaptada al
+            problema concreto de cada cliente en Jujuy.
           </p>
         </div>
 
@@ -76,6 +94,14 @@ const ServicesSection = () => {
               <p className="text-sm font-light leading-relaxed text-slate-600">
                 {service.text}
               </p>
+              {service.href && (
+                <Link
+                  href={service.href}
+                  className="mt-auto text-sm font-semibold text-amber-700 hover:text-amber-800"
+                >
+                  Leer la guía →
+                </Link>
+              )}
             </article>
           ))}
         </div>

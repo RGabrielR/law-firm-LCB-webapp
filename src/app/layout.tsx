@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Estudio Jurídico Baiud",
   },
   description:
-    "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, reclamos laborales y asesoramiento civil personalizado.",
+    "Abogada en San Salvador de Jujuy para divorcios, sucesiones, despidos, comercio exterior y aduana, minería y litio, y productores tabacaleros.",
   keywords: [
     "abogada en Jujuy",
     "abogados en Jujuy",
@@ -35,6 +35,14 @@ export const metadata: Metadata = {
     "asesoría legal jujuy",
     "mediación y arbitraje",
     "derecho previsional",
+    "abogado comercio exterior jujuy",
+    "abogado aduanero jujuy",
+    "abogado importación exportación jujuy",
+    "abogado minero jujuy",
+    "abogado litio jujuy",
+    "abogado tabaco jujuy",
+    "abogado agrario jujuy",
+    "abogado perico jujuy",
   ],
   category: "Legal",
   authors: [{ name: siteConfig.legalName }],

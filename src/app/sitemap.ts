@@ -21,7 +21,7 @@ const staticPages = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = staticPages.map((page) => ({
     url: absoluteUrl(page.path),
-    lastModified: new Date("2026-03-30"),
+    lastModified: new Date("2026-09-14"),
     changeFrequency: "weekly" as const,
     priority: page.priority,
   }));

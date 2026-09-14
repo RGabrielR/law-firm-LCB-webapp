@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export type ArticleMeta = {
@@ -7,7 +9,12 @@ export type ArticleMeta = {
   category: string;
   publishedAt: string;
   modifiedAt: string;
+  // Título corto para <title>: el layout le agrega " | Estudio Jurídico Baiud".
+  seoTitle?: string;
+  keywords?: string[];
 };
+
+const AUTHOR_NAME = "Dra. Lidia Cristina Baiud";
 
 export const articles: ArticleMeta[] = [
   {
@@ -56,6 +63,81 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2026-03-31",
     modifiedAt: "2026-03-31",
   },
+  {
+    slug: "abogados-comercio-exterior-aduana-jujuy",
+    title:
+      "Abogados de comercio exterior en Jujuy: importación, exportación y aduana",
+    seoTitle: "Abogados de comercio exterior y aduana en Jujuy",
+    description:
+      "Guía legal para importar y exportar desde Jujuy: alta como importador ante ARCA, Código Aduanero, Zona Franca Perico, multas, secuestro de mercadería y cómo defenderte.",
+    category: "Comercio Exterior y Aduana",
+    publishedAt: "2026-09-14",
+    modifiedAt: "2026-09-14",
+    keywords: [
+      "abogado comercio exterior jujuy",
+      "abogado aduanero jujuy",
+      "abogados importación jujuy",
+      "abogado exportación jujuy",
+      "importar desde jujuy",
+      "infracciones aduaneras jujuy",
+      "secuestro de mercadería aduana",
+      "defensa contrabando jujuy",
+      "zona franca perico",
+      "aduana la quiaca",
+      "paso de jama comercio exterior",
+      "alta importador arca",
+    ],
+  },
+  {
+    slug: "abogados-mineria-litio-jujuy",
+    title:
+      "Abogados de minería en Jujuy: litio, concesiones, superficiarios y comunidades",
+    seoTitle: "Abogados de minería y litio en Jujuy",
+    description:
+      "Guía de derecho minero en Jujuy: cateos y concesiones ante el Juzgado Administrativo de Minas, servidumbres, derechos de superficiarios y comunidades, RIGI y proveedores del litio.",
+    category: "Derecho Minero",
+    publishedAt: "2026-09-14",
+    modifiedAt: "2026-09-14",
+    keywords: [
+      "abogado minero jujuy",
+      "abogados minería jujuy",
+      "abogado litio jujuy",
+      "derecho minero jujuy",
+      "juzgado administrativo de minas jujuy",
+      "concesión minera jujuy",
+      "servidumbre minera indemnización",
+      "derechos del superficiario minería",
+      "proveedores mineros jujuy",
+      "rigi minería jujuy",
+      "consulta previa comunidades indígenas minería",
+      "cantera de áridos jujuy",
+    ],
+  },
+  {
+    slug: "abogados-productores-tabacaleros-jujuy",
+    title:
+      "Abogados para productores tabacaleros en Jujuy: FET, contratos, campo y trabajo rural",
+    seoTitle: "Abogados para productores de tabaco en Jujuy",
+    description:
+      "Guía legal para productores de tabaco en Jujuy: reclamos por el Fondo Especial del Tabaco, liquidaciones de acopio, arriendos, trabajadores rurales, sucesiones de fincas y deudas del campo.",
+    category: "Derecho Agrario",
+    publishedAt: "2026-09-14",
+    modifiedAt: "2026-09-14",
+    keywords: [
+      "abogado tabaco jujuy",
+      "abogado productores tabacaleros jujuy",
+      "fondo especial del tabaco fet",
+      "reclamo fet jujuy",
+      "abogado agrario jujuy",
+      "arrendamiento rural jujuy",
+      "contrato de aparcería tabaco",
+      "trabajadores rurales ley 26.727",
+      "sucesión finca rural jujuy",
+      "abogado perico jujuy",
+      "abogado el carmen jujuy",
+      "abogado monterrico jujuy",
+    ],
+  },
 ];
 
 export const articleMap = Object.fromEntries(
@@ -74,10 +156,16 @@ export function createArticleSchema(article: ArticleMeta) {
     dateModified: article.modifiedAt,
     mainEntityOfPage: articleUrl,
     articleSection: article.category,
+    ...(article.keywords && { keywords: article.keywords.join(", ") }),
     inLanguage: "es-AR",
     author: {
       "@type": "Person",
-      name: "Dra. Lidia Cristina Baiud",
+      name: AUTHOR_NAME,
+      jobTitle: "Abogada",
+      url: siteConfig.url,
+      worksFor: {
+        "@id": absoluteUrl("/#organization"),
+      },
     },
     publisher: {
       "@type": "Organization",
@@ -88,5 +176,44 @@ export function createArticleSchema(article: ArticleMeta) {
       },
     },
     image: absoluteUrl("/herobanner.webp"),
+  };
+}
+
+export function createArticleMetadata(article: ArticleMeta): Metadata {
+  const url = absoluteUrl(`/articulos/${article.slug}`);
+  const title = article.seoTitle ?? article.title;
+  const image = {
+    url: absoluteUrl("/herobanner.webp"),
+    alt: `${article.title} | ${siteConfig.name}`,
+  };
+
+  return {
+    title,
+    description: article.description,
+    keywords: article.keywords,
+    authors: [{ name: AUTHOR_NAME, url: siteConfig.url }],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      title,
+      description: article.description,
+      siteName: siteConfig.name,
+      locale: "es_AR",
+      publishedTime: article.publishedAt,
+      modifiedTime: article.modifiedAt,
+      authors: [AUTHOR_NAME],
+      section: article.category,
+      tags: article.keywords,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: article.description,
+      images: [image.url],
+    },
   };
 }

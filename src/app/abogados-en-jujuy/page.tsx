@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Abogados en Jujuy | Estudio Jurídico Baiud",
   description:
-    "Abogados en Jujuy para divorcios, sucesiones, despidos y asesoramiento civil. Consultá con la Dra. Lidia Cristina Baiud en San Salvador de Jujuy.",
+    "Abogados en Jujuy para divorcios, sucesiones, despidos, comercio exterior y aduana, minería y productores tabacaleros. Consultá con la Dra. Lidia Cristina Baiud en San Salvador de Jujuy.",
   keywords: [
     "abogados en jujuy",
     "abogada en jujuy",
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     "abogada laboral jujuy",
     "abogada de familia jujuy",
     "sucesiones en jujuy",
+    "abogado comercio exterior jujuy",
+    "abogado aduanero jujuy",
+    "abogado minero jujuy",
+    "abogado litio jujuy",
+    "abogado tabaco jujuy",
   ],
   alternates: {
     canonical: absoluteUrl("/abogados-en-jujuy"),
@@ -34,7 +39,7 @@ export const metadata: Metadata = {
     url: absoluteUrl("/abogados-en-jujuy"),
     title: "Abogados en Jujuy | Estudio Jurídico Baiud",
     description:
-      "Asesoramiento legal en Jujuy para derecho de familia, sucesiones, despidos, reclamos laborales y conflictos civiles.",
+      "Asesoramiento legal en Jujuy para familia, sucesiones, reclamos laborales, comercio exterior y aduana, minería y productores tabacaleros.",
     siteName: siteConfig.name,
     locale: "es_AR",
     images: [
@@ -58,6 +63,9 @@ const featuredArticles = articles.filter((article) =>
     "divorcio-en-jujuy",
     "sucesion-herencia-jujuy",
     "despido-injustificado-jujuy",
+    "abogados-comercio-exterior-aduana-jujuy",
+    "abogados-mineria-litio-jujuy",
+    "abogados-productores-tabacaleros-jujuy",
   ].includes(article.slug),
 );
 
@@ -73,7 +81,7 @@ export default function AbogadosEnJujuyPage() {
     name: "Abogados en Jujuy",
     url: absoluteUrl("/abogados-en-jujuy"),
     description:
-      "Página de aterrizaje para consultas legales en Jujuy orientada a familia, sucesiones, trabajo y derecho civil.",
+      "Página de aterrizaje para consultas legales en Jujuy orientada a familia, sucesiones, trabajo, derecho civil, comercio exterior, minería y tabaco.",
     isPartOf: {
       "@id": absoluteUrl("/#website"),
     },
@@ -98,9 +106,10 @@ export default function AbogadosEnJujuyPage() {
         </h1>
         <p className="mt-6 max-w-3xl text-lg font-light leading-relaxed text-slate-200">
           Si buscás abogados en Jujuy para resolver un divorcio, una sucesión,
-          un despido o un conflicto civil, el Estudio Jurídico Baiud brinda
-          atención profesional en San Salvador de Jujuy y seguimiento cercano de
-          cada etapa del caso.
+          un despido, un problema con la Aduana, un conflicto vinculado a la
+          minería o un reclamo como productor tabacalero, el Estudio Jurídico
+          Baiud brinda atención profesional en San Salvador de Jujuy y
+          seguimiento cercano de cada etapa del caso.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
@@ -127,11 +136,12 @@ export default function AbogadosEnJujuyPage() {
             Qué tipo de casos atendemos en la provincia de Jujuy
           </h2>
           <p className="mt-4 text-base font-light leading-relaxed text-slate-600">
-            El objetivo del sitio no es atraer tráfico genérico, sino consultas
-            reales de personas que necesitan ayuda legal concreta. Por eso la
-            estructura apunta a búsquedas de alta intención como abogada en
-            Jujuy, abogados en San Salvador de Jujuy, divorcio en Jujuy,
-            sucesiones en Jujuy y reclamos laborales en Jujuy.
+            Además de los casos de familia, sucesiones y trabajo, el estudio
+            acompaña a quienes viven de las actividades que mueven la economía
+            jujeña: importadores y exportadores que operan por La Quiaca, el
+            Paso de Jama o la Zona Franca Perico; superficiarios, proveedores y
+            trabajadores de la minería del litio; y productores tabacaleros del
+            Valle de los Pericos.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -148,13 +158,13 @@ export default function AbogadosEnJujuyPage() {
 
         <div className="rounded-3xl bg-amber-50 p-8 shadow-lg">
           <h2 className="text-3xl font-black text-slate-950">
-            Cobertura local y atención
+            Oficina en San Salvador de Jujuy
           </h2>
           <p className="mt-4 text-base font-light leading-relaxed text-slate-700">
             La oficina se encuentra en {siteConfig.address.streetAddress},{" "}
-            {siteConfig.address.addressLocality}. Además de consultas
-            presenciales, el estudio recibe casos de distintas ciudades de la
-            provincia y organiza instancias online cuando el asunto lo permite.
+            {siteConfig.address.addressLocality}. Atendemos consultas de toda la
+            provincia, con traslados cuando el caso lo requiere, e instancias
+            online cuando el asunto lo permite.
           </p>
           <ul className="mt-6 space-y-2 text-sm font-medium text-slate-700">
             {serviceAreas.map((area) => (
@@ -166,13 +176,11 @@ export default function AbogadosEnJujuyPage() {
 
       <section className="mt-12 rounded-3xl bg-white p-8 shadow-lg">
         <h2 className="text-3xl font-black text-slate-950">
-          Contenido legal que refuerza autoridad temática
+          Guías legales para los casos más consultados en Jujuy
         </h2>
         <p className="mt-4 max-w-3xl text-base font-light leading-relaxed text-slate-600">
-          Para ganar visibilidad orgánica no alcanza con una home bien escrita.
-          También hacen falta páginas que respondan preguntas concretas con
-          profundidad. Por eso el sitio ya tiene artículos orientados a
-          intenciones de búsqueda fuertes dentro de Jujuy.
+          Artículos escritos por el estudio que explican, paso a paso, cómo
+          funcionan los trámites y reclamos más frecuentes en la provincia.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">

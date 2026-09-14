@@ -10,8 +10,8 @@ const LocalSeoSection = () => {
           SEO local
         </span>
         <h2 className="mt-4 max-w-4xl text-3xl font-black leading-tight sm:text-4xl">
-          Abogada en Jujuy para familia, sucesiones, despidos y conflictos
-          civiles
+          Abogada en Jujuy para familia, sucesiones, despidos, comercio
+          exterior, minería y tabaco
         </h2>
         <p className="mt-4 max-w-4xl text-base font-light leading-relaxed text-slate-200 md:text-lg">
           Si buscás abogados en Jujuy, necesitás una respuesta clara desde el
@@ -40,8 +40,12 @@ const LocalSeoSection = () => {
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-xl font-semibold text-white">
-              Zonas de atención
+              Oficina en San Salvador de Jujuy
             </h3>
+            <p className="mt-2 text-sm font-light leading-relaxed text-slate-300">
+              Atendemos consultas de toda la provincia, con traslados cuando el
+              caso lo requiere.
+            </p>
             <ul className="mt-4 space-y-2 text-sm font-light text-slate-200">
               {serviceAreas.map((area) => (
                 <li key={area}>{area}</li>

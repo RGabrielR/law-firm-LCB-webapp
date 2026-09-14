@@ -9,13 +9,16 @@ import { absoluteUrl, createBreadcrumbSchema, siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Artículos legales en Jujuy",
   description:
-    "Guías legales sobre divorcio, sucesiones, despidos y actualidad jurídica en Jujuy publicadas por el Estudio Jurídico Baiud.",
+    "Guías legales sobre divorcio, sucesiones, despidos, comercio exterior y aduana, minería, tabaco y actualidad jurídica en Jujuy publicadas por el Estudio Jurídico Baiud.",
   keywords: [
     "artículos legales jujuy",
     "abogada jujuy blog",
     "divorcio en jujuy",
     "sucesiones en jujuy",
     "despido injustificado jujuy",
+    "comercio exterior jujuy",
+    "derecho minero jujuy",
+    "productores tabacaleros jujuy",
   ],
   alternates: {
     canonical: absoluteUrl("/articulos"),
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
     url: absoluteUrl("/articulos"),
     title: "Artículos legales en Jujuy",
     description:
-      "Contenido legal orientado a búsquedas de alta intención en Jujuy: divorcios, sucesiones, reclamos laborales y actualidad jurídica.",
+      "Guías legales para Jujuy: divorcios, sucesiones, reclamos laborales, comercio exterior y aduana, minería, tabaco y actualidad jurídica.",
     siteName: siteConfig.name,
   },
 };
@@ -42,7 +45,7 @@ export default function ArticulosPage() {
     name: "Artículos legales en Jujuy",
     url: absoluteUrl("/articulos"),
     description:
-      "Colección de artículos del Estudio Jurídico Baiud sobre derecho de familia, sucesiones y derecho laboral en Jujuy.",
+      "Colección de artículos del Estudio Jurídico Baiud sobre derecho de familia, sucesiones, derecho laboral, comercio exterior, minería y tabaco en Jujuy.",
     hasPart: articles.map((article) => ({
       "@type": "Article",
       headline: article.title,
@@ -64,8 +67,9 @@ export default function ArticulosPage() {
         </h1>
         <p className="mx-auto mt-4 max-w-3xl text-lg font-light text-slate-600">
           Contenido pensado para responder búsquedas concretas en Google: cómo
-          tramitar un divorcio, iniciar una sucesión, reclamar un despido o
-          entender cambios legales que impactan en la provincia.
+          tramitar un divorcio, iniciar una sucesión, reclamar un despido,
+          defenderte ante la Aduana, negociar una servidumbre minera, reclamar
+          el FET o entender cambios legales que impactan en la provincia.
         </p>
       </div>
 
