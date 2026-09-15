@@ -358,7 +358,7 @@ export default function MigracionExtranjerosJujuyPage() {
           </p>
 
           <h2 className="mt-12 text-3xl font-bold text-slate-950">
-            ¿Por qué contar con una abogada especializada en derecho migratorio?
+            ¿Por qué consultar con una abogada por temas migratorios?
           </h2>
 
           <p>

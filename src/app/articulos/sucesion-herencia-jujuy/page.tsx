@@ -148,7 +148,7 @@ export default function SucesionHerenciaJujuyPage() {
           <p>
             El trámite se inicia presentando una demanda de declaratoria de
             herederos ante el Juzgado Civil correspondiente en Jujuy. Es
-            fundamental contar con un abogado especializado desde el inicio.
+            fundamental contar con asesoramiento legal desde el inicio.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900">

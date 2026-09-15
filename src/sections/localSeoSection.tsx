@@ -52,7 +52,7 @@ const LocalSeoSection = () => {
         <div className="mt-8 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <div className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-xl font-semibold text-white">
-              Áreas en las que nos especializamos
+              Áreas en las que trabajamos
             </h3>
             <p className="mt-2 text-sm font-light leading-relaxed text-slate-300">
               Tocá un área para leer la guía y conocer cómo trabajamos cada
