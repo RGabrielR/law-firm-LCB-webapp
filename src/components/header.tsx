@@ -8,7 +8,8 @@ import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 import { siteConfig } from "@/lib/site";
-import Laurel from "../../public/laurel.png";
+// WebP y no PNG: .vercelignore excluye /public/*.png del deploy.
+import Laurel from "../../public/laurel.webp";
 
 const menuItems: { title: string; href: string }[] = [
   { title: "Sobre", href: "/#About" },
