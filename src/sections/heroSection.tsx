@@ -24,7 +24,7 @@ const portraitAlt =
 const HeroSection = () => {
   return (
     <section
-      className="relative mx-auto flex min-h-[620px] w-full items-center overflow-hidden rounded-b-3xl bg-slate-950 py-16 text-white shadow-2xl lg:min-h-[calc(100vh-80px)] lg:py-20 3xl:max-w-[1580px]"
+      className="relative mx-auto flex min-h-[620px] w-full items-center overflow-hidden rounded-b-3xl bg-slate-950 py-16 text-white shadow-2xl lg:min-h-[calc(100vh-80px)] lg:py-20"
       id="Home"
     >
       <div className="absolute inset-0" aria-hidden="true">
