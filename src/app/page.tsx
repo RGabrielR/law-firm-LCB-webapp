@@ -4,6 +4,7 @@ import ContactSection from "@/sections/contactSection";
 import FaqSection from "@/sections/faqSection";
 import HeroSection from "@/sections/heroSection";
 import LocalSeoSection from "@/sections/localSeoSection";
+import ReviewsSection from "@/sections/reviewsSection";
 import ServicesSection from "@/sections/servicesSection";
 import ValuesSection from "@/sections/valuesSection";
 import { absoluteUrl, createFaqSchema, homeFaqs } from "@/lib/site";
@@ -25,14 +26,17 @@ export default function Home() {
     inLanguage: "es-AR",
   };
 
+  // Las secciones alternan fondos a todo el ancho, así que acá no hay espacio
+  // entre ellas (el <main> general tiene gap-24).
   return (
-    <main>
+    <main className="gap-0 pb-0">
       <JsonLd data={homePageSchema} />
       <JsonLd data={createFaqSchema(homeFaqs)} />
       <HeroSection />
       <AboutSection />
       <ValuesSection />
       <ServicesSection />
+      <ReviewsSection />
       <LocalSeoSection />
       <FaqSection />
       <ContactSection />

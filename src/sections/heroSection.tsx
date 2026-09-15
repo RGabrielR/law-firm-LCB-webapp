@@ -48,7 +48,6 @@ const HeroSection = () => {
               src={portrait}
               alt={portraitAlt}
               fill
-              priority
               sizes="112px"
               className="object-cover object-top"
             />

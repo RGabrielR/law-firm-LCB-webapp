@@ -1,28 +1,21 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import { useEffect } from "react";
-import { Button } from "@nextui-org/react";
-import { motion } from "framer-motion";
-import { HiLocationMarker, HiPhone } from "react-icons/hi";
-import { IoCalendarOutline } from "react-icons/io5";
-import { TbMapStar } from "react-icons/tb";
-import { useInView } from "react-intersection-observer";
+import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
+import { IoLogoWhatsapp } from "react-icons/io5";
 
-import { fadeIn } from "../../animation/variants";
-import Location from "../../public/location.webp";
+import Reveal from "@/components/reveal";
+import { siteConfig } from "@/lib/site";
 
 const ContactMap = dynamic(() => import("@/components/contact/ContactMap"), {
   ssr: false,
   loading: () => (
-    <div className="h-72 w-full animate-pulse rounded-3xl bg-slate-200 dark:bg-slate-700 lg:h-full" />
+    <div className="h-full min-h-[320px] w-full animate-pulse bg-slate-200" />
   ),
 });
 
 const ContactSection = () => {
-  const [ref, inView] = useInView({ triggerOnce: false });
-
   useEffect(() => {
     const registerVisit = async () => {
       try {
@@ -37,93 +30,73 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section
-      className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-16 lg:flex-row xl:max-w-[1380px]"
-      ref={ref}
-      id="Contact"
-    >
-      <motion.div
-        variants={fadeIn("left", 0)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        exit="hidden"
-        className="relative mx-auto flex w-full max-w-7xl flex-col gap-10 rounded-3xl bg-white/80 p-6 shadow-2xl backdrop-blur dark:bg-slate-900/80 lg:flex-row lg:p-12"
-      >
-        <div className="flex w-full flex-col gap-6 rounded-3xl bg-gradient-to-br from-yellow-800/95 via-yellow-700/90 to-amber-500/90 p-6 text-center text-white lg:w-1/2 lg:p-10 lg:text-left">
-          <div className="flex flex-col items-center gap-2 text-left lg:items-start">
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-200/90 lg:text-sm">
+    <section id="Contact" className="w-full bg-slate-50 py-20 lg:py-28">
+      <Reveal className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="flex flex-col gap-8 bg-amber-400 p-8 text-slate-950 sm:p-12">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-900">
               Contacto
             </span>
-            <h2 className="text-3xl font-black leading-tight text-white sm:text-4xl xl:text-5xl">
-              Consultá con la Dra. Lidia Cristina Baiud en Jujuy
+            <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
+              Empecemos a conversar
             </h2>
-          </div>
-
-          <div className="space-y-3 text-sm font-light md:text-base">
-            <div className="flex flex-wrap items-center justify-center gap-3 text-amber-50/90 lg:justify-start">
-              <HiLocationMarker size={26} className="text-amber-200" />
-              <p className="max-w-[28ch] text-left leading-relaxed">
-                Ramírez de Velazco 672, San Salvador de Jujuy, Jujuy, Argentina
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 text-amber-50/90 lg:justify-start">
-              <HiPhone size={26} className="text-amber-200" />
-              <a
-                href="tel:+543884881609"
-                className="text-left leading-relaxed hover:text-white"
-              >
-                +54 (388) 4881-609
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-3 lg:items-start">
-            <Button
-              className="h-14 w-full text-base font-semibold text-yellow-900 shadow-lg shadow-amber-500/30 hover:shadow-amber-400/50 lg:max-w-sm"
-              color="warning"
-              endContent={<TbMapStar size={30} className="ml-2 text-yellow-900" />}
-              onClick={() => {
-                window.open(
-                  "https://www.google.com/maps?q=Ram%C3%ADrez%20de%20Velazco%20672,%20San%20Salvador%20de%20Jujuy,%20Jujuy",
-                  "_blank",
-                );
-              }}
-            >
-              Ver en Google Maps
-            </Button>
-            <Button
-              className="h-14 w-full text-base font-semibold text-yellow-900 shadow-lg shadow-amber-500/30 hover:shadow-amber-400/50 lg:max-w-sm"
-              color="warning"
-              endContent={<IoCalendarOutline size={30} className="ml-2 text-yellow-900" />}
-              onClick={() => {
-                window.open(
-                  "https://api.whatsapp.com/send/?phone=%2B543884881609&text&type=phone_number&app_absent=0",
-                  "_blank",
-                );
-              }}
-            >
-              Agendar consulta
-            </Button>
-          </div>
-        </div>
-
-        <div className="flex w-full flex-col gap-6 lg:w-1/2">
-          <div className="flex h-full flex-1 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800">
-            <ContactMap />
-          </div>
-          <div className="hidden h-full flex-1 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 lg:block">
-            <Image
-              src={Location}
-              alt="Ubicación del Estudio Jurídico LCB en San Salvador de Jujuy"
-              sizes="100vw"
-              width={0}
-              height={0}
-              className="h-full w-full object-cover"
+            <span
+              className="mt-6 block h-1 w-14 rounded-full bg-slate-950"
+              aria-hidden="true"
             />
+            <p className="mt-6 max-w-md text-base leading-relaxed text-amber-950/90 md:text-lg">
+              Consultá con la Dra. Lidia Cristina Baiud: contanos tu situación
+              por WhatsApp y coordinamos una consulta presencial en San
+              Salvador de Jujuy o a distancia.
+            </p>
           </div>
+
+          <a
+            href={siteConfig.social.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-14 w-full items-center justify-center gap-3 rounded-full bg-slate-950 px-8 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 sm:w-fit"
+          >
+            <IoLogoWhatsapp size={22} aria-hidden="true" />
+            Escribinos por WhatsApp
+          </a>
+
+          <ul className="flex flex-col gap-4 text-base text-amber-950">
+            <li className="flex items-start gap-3">
+              <HiLocationMarker size={22} className="mt-0.5 shrink-0" aria-hidden="true" />
+              <a
+                href={siteConfig.social.maps}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+              >
+                {siteConfig.address.streetAddress}, San Salvador de Jujuy
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <HiPhone size={22} className="shrink-0" aria-hidden="true" />
+              <a href={`tel:${siteConfig.phoneRaw}`} className="hover:underline">
+                {siteConfig.phoneDisplay}
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <HiMail size={22} className="shrink-0" aria-hidden="true" />
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="break-all hover:underline"
+              >
+                {siteConfig.email}
+              </a>
+            </li>
+          </ul>
         </div>
-      </motion.div>
+
+        {/* isolate: las capas de Leaflet usan z-index 400+ y sin esto el mapa
+            se dibuja encima del menú fijo al hacer scroll. */}
+        <div className="relative isolate z-0 min-h-[320px] lg:min-h-full">
+          <ContactMap />
+        </div>
+      </Reveal>
     </section>
   );
 };

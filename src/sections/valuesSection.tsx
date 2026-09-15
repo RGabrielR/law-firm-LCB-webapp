@@ -1,13 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
 
-import { fadeIn } from "../../animation/variants";
-import values01 from "../../public/values01.webp";
-import values02 from "../../public/values02.webp";
+import Reveal from "@/components/reveal";
+import SectionHeading from "@/components/sectionHeading";
+import scalesPhoto from "../../public/plansbg.webp";
 
 const values: { title: string; text: string }[] = [
   {
@@ -25,70 +20,47 @@ const values: { title: string; text: string }[] = [
 ];
 
 const ValuesSection = () => {
-  const [ref, inView] = useInView({ triggerOnce: false });
-
   return (
     <section
-      className="relative mx-auto flex w-full flex-col items-center justify-center py-20 3xl:max-w-[1580px]"
-      ref={ref}
       id="Values"
+      className="relative w-full overflow-hidden bg-slate-950 py-20 text-white lg:py-28"
     >
-      <motion.div
-        variants={fadeIn("right", 0)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        exit="hidden"
-        className="relative mx-auto flex w-full flex-col items-center gap-12 overflow-hidden rounded-3xl bg-slate-950 py-16 text-white shadow-2xl"
-      >
-        <div className="absolute inset-0 bg-[url('/valuesbg.webp')] bg-cover bg-center opacity-20" />
-        <div className="relative flex w-full flex-col items-center gap-12 px-6 lg:px-16">
-          <h2
-            className="flex items-center justify-center gap-4 text-2xl font-semibold uppercase tracking-[0.4em] text-amber-300 md:text-3xl"
-            id="Values"
-          >
-            Nuestros valores <BsFillPatchCheckFill size={40} />
-          </h2>
+      <Image
+        src={scalesPhoto}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-10"
+        aria-hidden="true"
+      />
 
-          <div className="flex w-full flex-col-reverse items-center gap-12 lg:flex-row">
-            <div className="relative flex w-full flex-col items-center gap-6 lg:w-5/12">
-              <div className="absolute -right-10 top-10 hidden h-32 w-32 rounded-full bg-amber-400/20 blur-3xl lg:block" />
-              <Image
-                src={values01}
-                alt="Trabajo colaborativo en el estudio"
-                className="h-auto w-full rounded-3xl object-cover shadow-lg"
-                sizes="100vw"
-                width={0}
-                height={0}
-              />
-              <Image
-                src={values02}
-                alt="Equipo legal asesorando clientes"
-                className="h-auto w-full rounded-3xl object-cover shadow-lg"
-                sizes="100vw"
-                width={0}
-                height={0}
-              />
-            </div>
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-14">
+        <SectionHeading
+          eyebrow="Cómo trabajamos"
+          title="Nuestros valores"
+          tone="dark"
+        />
 
-            <div className="flex w-full flex-col gap-6 lg:w-7/12">
-              {values.map((value, index) => (
-                <div
-                  key={value.title}
-                  className="rounded-3xl bg-white/10 p-6 backdrop-blur transition hover:bg-white/15"
-                >
-                  <span className="text-lg font-semibold text-amber-300">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-2 text-2xl font-semibold">{value.title}</h3>
-                  <p className="mt-3 text-base font-light text-slate-100/90">
-                    {value.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.div>
+        <ol className="grid gap-12 md:grid-cols-3 md:gap-10">
+          {values.map((value, index) => (
+            <Reveal as="li" key={value.title} delay={index * 140}>
+              <span className="font-serif text-6xl font-semibold text-amber-400/90">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span
+                className="mt-4 block h-px w-full bg-white/15"
+                aria-hidden="true"
+              />
+              <h3 className="mt-6 font-serif text-2xl font-semibold">
+                {value.title}
+              </h3>
+              <p className="mt-3 text-base font-light leading-relaxed text-slate-300">
+                {value.text}
+              </p>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 };

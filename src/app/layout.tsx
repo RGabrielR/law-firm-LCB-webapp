@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 
 import ContactTracking from "@/components/analytics/contactTracking";
@@ -12,6 +12,17 @@ import UIProvider from "@/providers/UIProvider";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+// Marca <html class="js-reveal"> antes de pintar, solo si el navegador puede
+// animar la aparición. Si el JavaScript de la página no llega a cargar en 4 s,
+// se saca la marca para que nada quede oculto.
+const revealScript = `(function(){try{var d=document.documentElement;if('IntersectionObserver' in window&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('js-reveal');setTimeout(function(){if(!window.__revealReady){d.classList.remove('js-reveal')}},4000)}}catch(e){}})();`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -94,7 +105,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-AR">
+    <html lang="es-AR" className={playfair.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: revealScript }} />
+      </head>
       <body
         className={`${montserrat.className} min-h-screen bg-slate-50 text-slate-900 antialiased`}
       >

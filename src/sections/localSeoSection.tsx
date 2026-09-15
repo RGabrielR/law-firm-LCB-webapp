@@ -6,6 +6,7 @@ import {
   IoVideocamOutline,
 } from "react-icons/io5";
 
+import Reveal from "@/components/reveal";
 import { practiceAreas, serviceAreas, siteConfig } from "@/lib/site";
 
 // Cada área enlaza a su guía; las que no tienen guía quedan como etiqueta.
@@ -33,16 +34,20 @@ const remoteChannels = [
 
 const LocalSeoSection = () => {
   return (
-    <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-20 xl:max-w-[1380px]">
-      <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-2xl lg:p-12">
-        <span className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-300">
+    <section className="w-full bg-slate-50 py-20 lg:py-28">
+      <Reveal className="mx-auto w-full max-w-6xl rounded-[2rem] bg-slate-950 p-8 text-white lg:p-14">
+        <span className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-300">
           Atención en Jujuy
         </span>
-        <h2 className="mt-4 max-w-4xl text-3xl font-black leading-tight sm:text-4xl">
+        <h2 className="mt-4 max-w-4xl font-serif text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
           Abogada en Jujuy para familia, sucesiones, despidos, comercio
           exterior, minería y tabaco
         </h2>
-        <p className="mt-4 max-w-4xl text-base font-light leading-relaxed text-slate-200 md:text-lg">
+        <span
+          className="mt-6 block h-1 w-14 rounded-full bg-amber-400"
+          aria-hidden="true"
+        />
+        <p className="mt-6 max-w-4xl text-base font-light leading-relaxed text-slate-200 md:text-lg">
           Si buscás abogados en Jujuy, necesitás una respuesta clara desde el
           primer contacto. El Estudio Jurídico LCB atiende en su oficina de San
           Salvador de Jujuy y acompaña casos de toda la provincia, con foco en
@@ -140,7 +145,7 @@ const LocalSeoSection = () => {
             Leer artículos legales
           </Link>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

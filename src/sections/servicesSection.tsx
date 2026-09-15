@@ -1,16 +1,13 @@
-"use client";
-
-import { Button } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import { IoCalendarOutline } from "react-icons/io5";
-import { useInView } from "react-intersection-observer";
 
-import { siteConfig } from "@/lib/site";
+import Reveal from "@/components/reveal";
+import SectionHeading from "@/components/sectionHeading";
+import signingPhoto from "../../public/hero-consulta.webp";
+import justicePhoto from "../../public/herobg.webp";
+import libraryPhoto from "../../public/valuesbg.webp";
 
-import { fadeIn } from "../../animation/variants";
-
-const services: { title: string; text: string; href?: string }[] = [
+const services: { title: string; text: string; href: string }[] = [
   {
     title: "Consultas legales presenciales y online",
     text: "Diagnóstico integral y orientación clara para resolver dudas legales urgentes o planificar estrategias a largo plazo desde cualquier lugar.",
@@ -58,76 +55,123 @@ const services: { title: string; text: string; href?: string }[] = [
   },
 ];
 
+const featured: {
+  eyebrow: string;
+  title: string;
+  text: string;
+  href: string;
+  image: StaticImageData;
+}[] = [
+  {
+    eyebrow: "Familia",
+    title: "Divorcios, acuerdos y sucesiones",
+    text: "Momentos difíciles que necesitan orden y cercanía: convenios de divorcio, cuota alimentaria, declaratoria de herederos y partición de bienes.",
+    href: "/articulos/sucesion-herencia-jujuy",
+    image: libraryPhoto,
+  },
+  {
+    eyebrow: "Trabajo",
+    title: "Despidos y reclamos laborales",
+    text: "Revisamos tu liquidación, el telegrama y los plazos para reclamar la indemnización que corresponde, con las reglas vigentes.",
+    href: "/articulos/despido-injustificado-jujuy",
+    image: signingPhoto,
+  },
+  {
+    eyebrow: "Economía de Jujuy",
+    title: "Comercio exterior, minería y tabaco",
+    text: "Acompañamos a importadores, exportadores, superficiarios, proveedores de la minería y productores tabacaleros de la provincia.",
+    href: "/articulos/abogados-comercio-exterior-aduana-jujuy",
+    image: justicePhoto,
+  },
+];
+
 const ServicesSection = () => {
-  const [ref, inView] = useInView({ triggerOnce: false });
-
   return (
-    <section
-      className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-20 xl:max-w-[1380px]"
-      id="Services"
-      ref={ref}
-    >
-      <motion.div
-        variants={fadeIn("down", 0)}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        exit="hidden"
-        className="flex w-full flex-col gap-8 rounded-3xl bg-white/85 p-8 shadow-xl backdrop-blur lg:p-12"
-      >
-        <div className="flex flex-col gap-4 text-center lg:text-left">
-          <span className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-500">
-            Servicios
-          </span>
-          <h2 className="text-3xl font-black text-slate-950 sm:text-4xl">
-            Servicios legales en Jujuy para problemas urgentes y decisiones clave
-          </h2>
-          <p className="text-base font-light leading-relaxed text-slate-600 md:text-lg">
-            El estudio trabaja casos de derecho civil, laboral, previsional y
-            familiar, y acompaña a los sectores que mueven la economía de la
-            provincia: comercio exterior, minería y tabaco. Procesos claros,
-            tiempos de respuesta razonables y una estrategia adaptada al
-            problema concreto de cada cliente en Jujuy.
-          </p>
-        </div>
+    <section id="Services" className="w-full bg-slate-50 py-20 lg:py-28">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-14">
+        <SectionHeading
+          eyebrow="Servicios"
+          title="Servicios legales en Jujuy para problemas urgentes y decisiones clave"
+          description="El estudio trabaja casos de derecho civil, laboral, previsional y familiar, y acompaña a los sectores que mueven la economía de la provincia: comercio exterior, minería y tabaco. Procesos claros, tiempos de respuesta razonables y una estrategia adaptada a cada caso."
+        />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => (
-            <article
-              className="group flex h-full flex-col gap-3 rounded-3xl border border-slate-200 bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-              key={service.title}
-            >
-              <h3 className="text-lg font-semibold text-slate-900">
-                {service.title}
-              </h3>
-              <p className="text-sm font-light leading-relaxed text-slate-600">
-                {service.text}
-              </p>
-              {service.href && (
-                <Link
-                  href={service.href}
-                  className="mt-auto text-sm font-semibold text-amber-700 hover:text-amber-800"
-                >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service, index) => (
+            <Reveal key={service.title} delay={(index % 3) * 110} className="h-full">
+              <Link
+                href={service.href}
+                className="group relative flex h-full flex-col gap-3 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-xl hover:shadow-slate-200"
+              >
+                <span
+                  className="absolute left-0 top-0 h-1 w-12 bg-amber-400 transition-all duration-500 group-hover:w-full"
+                  aria-hidden="true"
+                />
+                <h3 className="font-serif text-xl font-semibold text-slate-950">
+                  {service.title}
+                </h3>
+                <p className="text-sm font-light leading-relaxed text-slate-600">
+                  {service.text}
+                </p>
+                <span className="mt-auto pt-2 text-sm font-semibold text-amber-700 transition group-hover:translate-x-1">
                   Leer la guía →
-                </Link>
-              )}
-            </article>
+                </span>
+              </Link>
+            </Reveal>
           ))}
         </div>
 
-        <Button
-          className="h-14 w-full max-w-sm self-center rounded-full border border-amber-400/60 bg-amber-400/90 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-300"
-          color="warning"
-          endContent={
-            <IoCalendarOutline size={30} className="ml-2 text-slate-950" />
-          }
-          as="a"
-          href={siteConfig.social.whatsapp}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Reservar una consulta
-        </Button>
-      </motion.div>
+        <div className="flex flex-col gap-6">
+          {featured.map((item, index) => (
+            <Reveal
+              key={item.title}
+              from={index % 2 === 0 ? "left" : "right"}
+              className="group relative overflow-hidden rounded-3xl bg-slate-950"
+            >
+              <Image
+                src={item.image}
+                alt=""
+                fill
+                sizes="(min-width: 1152px) 1152px, 100vw"
+                className="scale-110 object-cover opacity-50 blur-[2px] transition duration-700 group-hover:scale-105"
+                aria-hidden="true"
+              />
+              <div
+                className={`absolute inset-0 ${
+                  index % 2 === 0
+                    ? "bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20"
+                    : "bg-gradient-to-l from-slate-950 via-slate-950/80 to-slate-950/20"
+                }`}
+                aria-hidden="true"
+              />
+              <div
+                className={`relative flex max-w-xl flex-col gap-4 p-8 text-white sm:p-12 ${
+                  index % 2 === 0 ? "" : "md:ml-auto"
+                }`}
+              >
+                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-300">
+                  {item.eyebrow}
+                </span>
+                <h3 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+                  {item.title}
+                </h3>
+                <span
+                  className="block h-1 w-12 rounded-full bg-amber-400"
+                  aria-hidden="true"
+                />
+                <p className="text-base font-light leading-relaxed text-slate-200">
+                  {item.text}
+                </p>
+                <Link
+                  href={item.href}
+                  className="mt-2 inline-flex w-fit items-center rounded-full border border-amber-400 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-amber-300 transition hover:bg-amber-400 hover:text-slate-950"
+                >
+                  Leer la guía
+                </Link>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
