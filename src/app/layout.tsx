@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     url: absoluteUrl("/"),
     images: [
       {
-        url: absoluteUrl("/herobanner.webp"),
+        url: absoluteUrl("/og-estudio-lcb.jpg"),
         alt: "Estudio Jurídico LCB en San Salvador de Jujuy",
       },
     ],
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Abogada en Jujuy | Estudio Jurídico LCB",
     description:
       "Consultas legales con la Dra. Lidia Cristina Baiud para familia, sucesiones, despidos y derecho civil en Jujuy.",
-    images: [absoluteUrl("/herobanner.webp")],
+    images: [absoluteUrl("/og-estudio-lcb.jpg")],
   },
   icons: {
     icon: "/favicon.ico",

@@ -235,7 +235,7 @@ export function createArticleSchema(article: ArticleMeta) {
         url: absoluteUrl("/logo.webp"),
       },
     },
-    image: absoluteUrl("/herobanner.webp"),
+    image: absoluteUrl("/og-estudio-lcb.jpg"),
   };
 }
 
@@ -243,7 +243,7 @@ export function createArticleMetadata(article: ArticleMeta): Metadata {
   const url = absoluteUrl(`/articulos/${article.slug}`);
   const title = article.seoTitle ?? article.title;
   const image = {
-    url: absoluteUrl("/herobanner.webp"),
+    url: absoluteUrl("/og-estudio-lcb.jpg"),
     alt: `${article.title} | ${siteConfig.name}`,
   };
 

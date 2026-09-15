@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     images: [
       {
-        url: absoluteUrl("/herobanner.webp"),
+        url: absoluteUrl("/og-estudio-lcb.jpg"),
         alt: "Estudio Jurídico LCB en San Salvador de Jujuy",
       },
     ],
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Abogados en Jujuy | Estudio Jurídico LCB",
     description:
       "Abogados en Jujuy para divorcios, sucesiones, despidos y asesoramiento legal integral.",
-    images: [absoluteUrl("/herobanner.webp")],
+    images: [absoluteUrl("/og-estudio-lcb.jpg")],
   },
 };
 

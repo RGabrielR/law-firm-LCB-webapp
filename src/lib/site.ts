@@ -167,7 +167,7 @@ export function createBaseSchema() {
           "@id": absoluteUrl("/#organization"),
         },
         knowsAbout: practiceAreas,
-        image: absoluteUrl("/herobanner.webp"),
+        image: absoluteUrl("/og-estudio-lcb.jpg"),
         url: siteConfig.url,
       },
       {
@@ -176,7 +176,7 @@ export function createBaseSchema() {
         name: siteConfig.legalName,
         alternateName: [siteConfig.name, ...siteConfig.alternateNames],
         url: siteConfig.url,
-        image: absoluteUrl("/herobanner.webp"),
+        image: absoluteUrl("/og-estudio-lcb.jpg"),
         description: siteConfig.description,
         telephone: siteConfig.phoneDisplay,
         email: siteConfig.email,
