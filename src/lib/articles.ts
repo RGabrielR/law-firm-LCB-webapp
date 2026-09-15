@@ -198,6 +198,108 @@ export const articles: ArticleMeta[] = [
       "abogado monterrico jujuy",
     ],
   },
+  {
+    slug: "primera-consulta-abogada-jujuy",
+    title:
+      "Tu primera consulta con una abogada en Jujuy: qué llevar, qué preguntar y cómo es online",
+    seoTitle: "Primera consulta con una abogada en Jujuy: guía",
+    description:
+      "Cómo prepararte para una consulta legal en Jujuy, presencial u online: qué documentos llevar, qué preguntar sobre plazos y honorarios, y por qué no conviene esperar.",
+    category: "Consultas Legales",
+    publishedAt: "2026-09-15",
+    modifiedAt: "2026-09-15",
+    keywords: [
+      "consulta legal jujuy",
+      "consulta abogada online jujuy",
+      "abogada en san salvador de jujuy",
+      "que llevar a una consulta con un abogado",
+      "cuanto cuesta una consulta legal jujuy",
+      "asesoramiento legal online argentina",
+      "abogada jujuy whatsapp",
+    ],
+  },
+  {
+    slug: "como-es-un-juicio-en-jujuy",
+    title:
+      "Cómo es un juicio en Jujuy: etapas, tiempos y qué esperar del proceso oral",
+    seoTitle: "Cómo es un juicio civil en Jujuy: etapas y tiempos",
+    description:
+      "Guía del juicio civil en Jujuy con el Código Procesal Civil y Comercial (Ley 6.358): demanda, audiencias, prueba, sentencia y apelación, y qué hacer si ya tenés un juicio en curso.",
+    category: "Litigios",
+    publishedAt: "2026-09-15",
+    modifiedAt: "2026-09-15",
+    keywords: [
+      "juicio civil jujuy",
+      "abogada litigios jujuy",
+      "codigo procesal civil jujuy ley 6358",
+      "cuanto dura un juicio en jujuy",
+      "me iniciaron un juicio que hago",
+      "audiencia preliminar jujuy",
+      "cambiar de abogado juicio en curso",
+    ],
+  },
+  {
+    slug: "tramites-administrativos-tributarios-jujuy",
+    title:
+      "Guía para reclamar ante el Estado en Jujuy: Rentas, ARCA, municipios y recursos administrativos",
+    seoTitle: "Reclamos ante Rentas, ARCA y el Estado en Jujuy",
+    description:
+      "Cómo reclamar ante la Dirección Provincial de Rentas, ARCA, municipios y organismos públicos de Jujuy: plazos cortos para recurrir, multas, embargos fiscales y cuándo ir a la justicia.",
+    category: "Derecho Administrativo y Tributario",
+    publishedAt: "2026-09-15",
+    modifiedAt: "2026-09-15",
+    keywords: [
+      "abogada tributaria jujuy",
+      "reclamo rentas jujuy",
+      "recurso de reconsideracion rentas jujuy",
+      "abogado derecho administrativo jujuy",
+      "multa arca defensa",
+      "ejecucion fiscal jujuy",
+      "recurso jerarquico jujuy ley 1886",
+      "reclamo municipalidad san salvador de jujuy",
+    ],
+  },
+  {
+    slug: "jubilacion-pension-anses-jujuy",
+    title:
+      "Guía previsional para jujeños: jubilación, pensiones y reclamos ante ANSES",
+    seoTitle: "Jubilación y pensión en Jujuy: guía para ANSES",
+    description:
+      "Requisitos para jubilarse en 2026, qué pasó con la moratoria, plan de pago de aportes, PUAM, pensión por fallecimiento, retiro por invalidez y cómo reclamar a ANSES desde Jujuy.",
+    category: "Derecho Previsional",
+    publishedAt: "2026-09-15",
+    modifiedAt: "2026-09-15",
+    keywords: [
+      "abogada previsional jujuy",
+      "jubilacion jujuy anses",
+      "requisitos jubilacion 2026",
+      "moratoria previsional 2026",
+      "pension por fallecimiento anses",
+      "retiro por invalidez anses",
+      "reclamo anses jujuy",
+      "jubilacion empleados publicos jujuy",
+    ],
+  },
+  {
+    slug: "mediacion-jujuy",
+    title:
+      "Mediación y arbitraje en Jujuy: cómo resolver un conflicto sin llegar a juicio",
+    seoTitle: "Mediación y arbitraje en Jujuy: guía práctica",
+    description:
+      "Qué es la mediación en Jujuy, qué establece la Ley 6.353 de mediación prejudicial obligatoria, dónde se hace, qué temas no se pueden mediar y cuándo conviene el arbitraje.",
+    category: "Mediación y Arbitraje",
+    publishedAt: "2026-09-15",
+    modifiedAt: "2026-09-15",
+    keywords: [
+      "mediacion jujuy",
+      "ley 6353 mediacion jujuy",
+      "mediacion prejudicial obligatoria jujuy",
+      "abogada mediacion jujuy",
+      "arbitraje jujuy",
+      "acuerdo de mediacion homologacion",
+      "mediacion familiar jujuy",
+    ],
+  },
 ];
 
 export const articleMap = Object.fromEntries(

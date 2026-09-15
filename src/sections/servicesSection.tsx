@@ -14,26 +14,32 @@ const services: { title: string; text: string; href?: string }[] = [
   {
     title: "Consultas legales presenciales y online",
     text: "Diagnóstico integral y orientación clara para resolver dudas legales urgentes o planificar estrategias a largo plazo desde cualquier lugar.",
+    href: "/articulos/primera-consulta-abogada-jujuy",
   },
   {
     title: "Representación en litigios",
     text: "Defensa estratégica en juicios nuevos o en curso, con enfoque en resultados y comunicación permanente sobre cada avance.",
+    href: "/articulos/como-es-un-juicio-en-jujuy",
   },
   {
     title: "Trámites administrativos y tributarios",
     text: "Gestión completa frente a organismos públicos y entidades fiscales, optimizando tiempos y reduciendo contingencias.",
+    href: "/articulos/tramites-administrativos-tributarios-jujuy",
   },
   {
     title: "Derecho previsional",
     text: "Acompañamiento en trámites jubilatorios y pensiones para garantizar el acceso efectivo a los beneficios adquiridos.",
+    href: "/articulos/jubilacion-pension-anses-jujuy",
   },
   {
     title: "Sucesiones y derecho de familia",
     text: "Asesoramiento integral para sucesiones, particiones y acuerdos familiares con una mirada empática y ordenada.",
+    href: "/articulos/sucesion-herencia-jujuy",
   },
   {
     title: "Mediación y arbitraje",
     text: "Resolución alternativa de conflictos para alcanzar acuerdos eficientes y evitar procesos judiciales prolongados.",
+    href: "/articulos/mediacion-jujuy",
   },
   {
     title: "Comercio exterior y aduana",
