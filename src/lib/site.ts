@@ -40,6 +40,7 @@ export const practiceAreas = [
   "Derecho civil",
   "Mediación y arbitraje",
   "Derecho previsional",
+  "Trámites administrativos y tributarios",
   "Comercio exterior y aduana",
   "Derecho minero",
   "Derecho agrario y tabacalero",
@@ -80,9 +81,41 @@ export const homeFaqs: FaqItem[] = [
       "Sí. El estudio asesora a importadores y exportadores ante la Aduana, a superficiarios, proveedores y trabajadores vinculados a la minería del litio, y a productores tabacaleros en reclamos por el FET, arriendos, trabajadores rurales y sucesiones de fincas.",
   },
   {
+    question: "¿Para qué sirve la mediación?",
+    answer:
+      "La mediación sirve para resolver un conflicto con la ayuda de un mediador neutral, sin que un juez decida. Es más rápida y económica que un juicio, lo que se dice es confidencial y el acuerdo que se firma se puede hacer cumplir. Se usa mucho en problemas de alquileres, deudas, vecinos, socios y cuestiones económicas familiares.",
+  },
+  {
+    question: "¿En Jujuy es obligatorio pasar por mediación antes de un juicio?",
+    answer:
+      "La Ley 6.353 de Jujuy establece la mediación prejudicial obligatoria para la mayoría de los conflictos, con excepciones como los divorcios, la filiación o la adopción. Su implementación se está completando por etapas, así que en cada caso revisamos si hoy se exige antes de demandar.",
+  },
+  {
+    question: "¿Necesito ir con abogada a una mediación?",
+    answer:
+      "Es muy recomendable. El mediador no asesora a ninguna de las partes: tu abogada te explica qué conviene aceptar y se asegura de que el acuerdo quede claro, completo y se pueda ejecutar si la otra parte no cumple.",
+  },
+  {
+    question:
+      "Tengo un trámite que no sé cómo resolver, ¿cómo me puede ayudar el estudio de la Dra. Baiud?",
+    answer:
+      "Contanos por WhatsApp o en una consulta qué trámite es y qué papeles tenés. La Dra. Baiud revisa la situación, te explica qué opciones hay y qué plazos corren, y puede hacer el trámite por vos o acompañarte: presentaciones ante organismos públicos, reclamos, recursos, inscripciones, cartas documento y gestiones ante Rentas, ARCA, ANSES o la municipalidad.",
+  },
+  {
+    question:
+      "Me llegó una intimación, multa o resolución de Rentas, ARCA o la municipalidad, ¿qué hago?",
+    answer:
+      "Anotá la fecha en que te notificaron y consultá cuanto antes: los plazos para recurrir son cortos y, si vencen, la decisión queda firme. Por ejemplo, ante Rentas de Jujuy hay 15 días para el recurso de reconsideración. Revisamos si la deuda o la multa están bien y cuál es la mejor defensa o plan de pago.",
+  },
+  {
+    question: "¿Ayudan con jubilaciones, pensiones y reclamos ante ANSES?",
+    answer:
+      "Sí. Revisamos la historia laboral, iniciamos jubilaciones y pensiones, reunimos la prueba de convivencia cuando hace falta y hacemos reclamos administrativos y judiciales cuando ANSES rechaza un trámite o liquida mal un haber.",
+  },
+  {
     question: "¿Las consultas pueden ser presenciales y online?",
     answer:
-      "Sí. Se ofrecen consultas presenciales en San Salvador de Jujuy y también asesoramiento online para personas que necesitan una primera orientación legal sin trasladarse.",
+      "Sí. Atendemos en la oficina de San Salvador de Jujuy y, si estás en otra localidad o no podés viajar, hacemos la consulta por teléfono, videollamada, WhatsApp o el medio que prefieras.",
   },
 ];
 
