@@ -13,6 +13,10 @@ import {
 import HeroVideo from "@/components/heroVideo";
 import { siteConfig } from "@/lib/site";
 import heroPhoto from "../../public/hero-consulta.webp";
+import portrait from "../../public/dra-lidia-baiud.webp";
+
+const portraitAlt =
+  "Dra. Lidia Cristina Baiud, abogada en San Salvador de Jujuy";
 
 // La foto fija se ve siempre y es lo primero que carga. El video (stock de
 // Pexels, licencia libre) se suma encima solo si el aparato lo aguanta.
@@ -20,7 +24,7 @@ import heroPhoto from "../../public/hero-consulta.webp";
 const HeroSection = () => {
   return (
     <section
-      className="relative mx-auto flex min-h-[620px] w-full items-center overflow-hidden rounded-b-3xl bg-slate-950 py-20 text-white shadow-2xl lg:min-h-[calc(100vh-80px)] 3xl:max-w-[1580px]"
+      className="relative mx-auto flex min-h-[620px] w-full items-center overflow-hidden rounded-b-3xl bg-slate-950 py-16 text-white shadow-2xl lg:min-h-[calc(100vh-80px)] lg:py-20 3xl:max-w-[1580px]"
       id="Home"
     >
       <div className="absolute inset-0" aria-hidden="true">
@@ -33,12 +37,23 @@ const HeroSection = () => {
           className="object-cover"
         />
         <HeroVideo />
-        <div className="absolute inset-0 bg-slate-950/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/85 lg:to-slate-950/30" />
+        <div className="absolute inset-0 bg-slate-950/75 lg:bg-transparent lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/90 lg:to-slate-950/60" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950/80 to-transparent" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-6xl">
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center lg:mx-0 lg:items-start lg:text-left">
+          <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-amber-300/70 shadow-xl lg:hidden">
+            <Image
+              src={portrait}
+              alt={portraitAlt}
+              fill
+              priority
+              sizes="112px"
+              className="object-cover object-top"
+            />
+          </div>
+
           <span className="hero-rise text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/90 md:tracking-[0.3em]">
             Estudio Jurídico LCB · San Salvador de Jujuy
           </span>
@@ -106,6 +121,42 @@ const HeroSection = () => {
             </li>
           </ul>
         </div>
+
+        {/* Sin animación de entrada: la foto es lo más grande de la primera
+            vista y no conviene que arranque invisible. */}
+        <figure className="relative mx-auto hidden w-full max-w-md lg:block">
+          <div
+            className="absolute -inset-3 rounded-[2.25rem] border border-amber-300/25"
+            aria-hidden="true"
+          />
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/50">
+            <Image
+              src={portrait}
+              alt={portraitAlt}
+              priority
+              sizes="448px"
+              className="h-auto w-full"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/90 to-transparent"
+              aria-hidden="true"
+            />
+            <figcaption className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4">
+              <span className="flex flex-col">
+                <span className="text-lg font-bold text-white">
+                  Dra. Lidia Cristina Baiud
+                </span>
+                <span className="text-sm text-slate-300">
+                  Abogada · San Salvador de Jujuy
+                </span>
+              </span>
+              <span className="flex shrink-0 items-center gap-1 rounded-full bg-white/95 px-3 py-1.5 text-sm font-semibold text-slate-900 shadow">
+                <IoStar className="text-amber-500" aria-hidden="true" />
+                5,0
+              </span>
+            </figcaption>
+          </div>
+        </figure>
       </div>
     </section>
   );

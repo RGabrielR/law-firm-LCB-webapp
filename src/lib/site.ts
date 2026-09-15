@@ -200,7 +200,7 @@ export function createBaseSchema() {
           "@id": absoluteUrl("/#organization"),
         },
         knowsAbout: practiceAreas,
-        image: absoluteUrl("/og-estudio-lcb.jpg"),
+        image: absoluteUrl("/dra-lidia-baiud.webp"),
         url: siteConfig.url,
       },
       {
