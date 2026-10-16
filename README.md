@@ -1,4 +1,4 @@
 # Imágenes para Google Ads
 
-Rama aparte con las imágenes y el logo de las campañas de Google Ads del Estudio Jurídico LCB.
+Rama aparte con las imágenes y logos de las campañas de Google Ads (Estudio Jurídico LCB en `google-ads/` y ZapStream en `zapstream/`).
 No forma parte del sitio web y no se despliega.
