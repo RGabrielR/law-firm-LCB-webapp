@@ -1,0 +1,11 @@
+// Sitio estático en Cloudflare (Workers static assets).
+// Publicar: npm run build && npx wrangler deploy
+{
+  "name": "estudiolcb",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
