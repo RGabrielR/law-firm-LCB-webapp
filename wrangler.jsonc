@@ -2,6 +2,12 @@
 // Publicar: npm run build && npx wrangler deploy
 {
   "name": "estudiolcb",
+  "account_id": "a2df92c02b319f83353163ef3f4a288c",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "estudiolcb.com.ar", "custom_domain": true },
+    { "pattern": "www.estudiolcb.com.ar", "custom_domain": true }
+  ],
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./out",
