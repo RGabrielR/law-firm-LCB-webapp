@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { IoLogoWhatsapp } from "react-icons/io5";
 
@@ -16,19 +15,6 @@ const ContactMap = dynamic(() => import("@/components/contact/ContactMap"), {
 });
 
 const ContactSection = () => {
-  useEffect(() => {
-    const registerVisit = async () => {
-      try {
-        const response = await fetch("/api/visits", { method: "POST" });
-        await response.json();
-      } catch (error) {
-        console.error("No se pudo actualizar el contador de visitas", error);
-      }
-    };
-
-    void registerVisit();
-  }, []);
-
   return (
     <section id="Contact" className="w-full bg-slate-50 py-20 lg:py-28">
       <Reveal className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200 lg:grid-cols-[1.1fr_0.9fr]">
