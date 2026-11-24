@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable output file tracing to avoid OneDrive sync issues
-  outputFileTracing: false,
+  // Sitio estático: se genera en /out y se sirve desde Cloudflare.
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig
