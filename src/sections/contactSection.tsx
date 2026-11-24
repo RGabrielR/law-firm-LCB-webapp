@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -26,19 +25,6 @@ const ContactSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
   const { language } = useLanguage();
   const copy = siteCopy[language].contact;
-
-  useEffect(() => {
-    const registerVisit = async () => {
-      try {
-        const response = await fetch("/api/visits", { method: "POST" });
-        await response.json();
-      } catch (error) {
-        console.error("Could not update visit counter", error);
-      }
-    };
-
-    void registerVisit();
-  }, []);
 
   return (
     <section
